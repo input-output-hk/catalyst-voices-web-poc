@@ -1,0 +1,29 @@
+title Active Voter Registration
+
+participant User
+participant GVC Frontend
+participant Wallet
+participant GVC Backend
+
+User->GVC Frontend: 'Register to Vote' Button pressed
+GVC Frontend->GVC Frontend: Build **Delegation** object (using vote **PublicKey**)
+GVC Frontend->Wallet: **cip62API.submitDelegation(Delegation)**
+
+Wallet->Wallet:Build CIP-36 compliant transaction
+Wallet->User: Sign transaction prompt (Wallet UI)
+User->Wallet: Grants signature of transcation (Wallet UI)
+Wallet->Cardano Node: Submit transcation
+
+Wallet->GVC Frontend: **SignedDelegationMetadata** Object
+
+GVC Frontend->GVC Backend: **POST api/transactions**
+
+note over GVC Frontend: IF user is a voter THEN
+
+GVC Frontend->GVC Backend: **POST api/voters**
+
+note over GVC Frontend: ELSE
+
+GVC Frontend->GVC Backend: **PUT api/voters**
+
+GVC Frontend->User: Confirmation of submission UI

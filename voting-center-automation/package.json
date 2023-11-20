@@ -1,0 +1,46 @@
+{
+    "name": "voting-center-automation-tests",
+    "version": "0.1.0",
+    "private": true,
+    "devDependencies": {
+        "@faker-js/faker": "^8.0.2",
+        "@wdio/cli": "^7.24.0",
+        "@wdio/local-runner": "^7.24.0",
+        "@wdio/mocha-framework": "^7.24.0",
+        "@wdio/spec-reporter": "^7.24.0",
+        "allure-mocha": "^2.0.0-beta.19",
+        "chromedriver": "^108.0.0",
+        "mocha": "^10.1.0",
+        "wdio-chromedriver-service": "^7.3.2",
+        "bad-words": "^3.0.4"
+    },
+    "scripts": {
+        "wdio": "wdio run wdio.conf.js",
+        "api-test-single": "mocha 'tests/specs/api/' --fgrep",
+        "api-test-dreps": "mocha 'tests/specs/api/dreps_api.js'",
+        "api-test-voters": "mocha 'tests/specs/api/voters_api.js'",
+        "api-test-delegations": "mocha 'tests/specs/api/delegations_api.js'",
+        "api-test-terms": "mocha 'tests/specs/api/terms_and_conditions_api.js'",
+        "api-test-drepTos": "mocha 'tests/specs/api/drep_tos_policy_api.js'",
+        "api-test-privacyPolicy": "mocha 'tests/specs/api/privacy_policy_api.js'",
+        "api-test-drepPrivacyPolicy": "mocha 'tests/specs/api/drep_privacy_policy_api.js'",
+        "api-test-transactions": "mocha 'tests/specs/api/transactions_api.js'",
+        "api-test": "mocha 'tests/specs/api/**.js'  -R allure-mocha",
+        "ui-test": "wdio run wdio.conf.js",
+        "regression-ui-test": "npm run wdio -- --mochaOpts.grep 'regression'",
+        "smoke-ui-test": "npm run wdio -- --mochaOpts.grep 'smoke'",
+        "wip": "npm run wdio -- --mochaOpts.grep 'wip'",
+        "prepare-backend-db-copy-sync": "cp -r ./setup/sync ../voting-center-backend/config",
+        "prepare-backend-db-do-setup": "cd ../voting-center-backend && npm run cs import -- -y -p user-role.authenticated",
+        "prepare-backend-db": "npm run prepare-backend-db-copy-sync && npm run prepare-backend-db-do-setup"
+    },
+    "dependencies": {
+        "@wdio/sync": "^7.25.1",
+        "axios": "^0.27.2",
+        "bech32": "^2.0.0",
+        "chai": "^4.3.6",
+        "crypto": "^1.0.1",
+        "dotenv": "^16.0.2",
+        "faker": "^6.5.0"
+    }
+}

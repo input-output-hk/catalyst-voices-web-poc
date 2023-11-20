@@ -1,0 +1,20 @@
+title Transaction Verification 
+
+participant Transaction Service
+participant GVC Backend
+participant Blockfrost
+
+note over Transaction Service: Get transactions WHERE not finalized AND **tx.submitted_at < expiration**
+
+Transaction Service->GVC Backend: **GET api/transactions** 
+GVC Backend->Transaction Service: **[tx]**
+
+note over Transaction Service: IF submitted < **expiration**
+
+Transaction Service->Transaction Service: Filter WHERE **tx.is_finalized** == FALSE AND **tx.submitted_at < expiration**
+note over Transaction Service: Query Blockfrost
+Transaction Service->Blockfrost: **GET api/v0/txs/{tx.transaction_hash}**
+Blockfrost->Transaction Service: **Response**
+note over Transaction Service: IF **Response** == 404 THEN break
+note over Transaction Service: ELIF **Response** == 200 THEN
+Transaction Service->GVC Backend: **PUT api/transactions/{tx.id}**

@@ -1,0 +1,15 @@
+@import '../../assets/styles/variables';
+
+.progress-bar-loader {
+    background-color: $foreground;
+    .progress-bar {
+        background-color: $primary;
+    }
+    border-radius: 5px;
+    height: 5px;
+    margin: 8px 0 32px 0;
+
+    @media only screen and (max-width: $--breakpoints-md) {
+        margin: 16px 0 16px 0;
+    }
+}

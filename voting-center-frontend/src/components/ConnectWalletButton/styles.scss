@@ -1,0 +1,43 @@
+@import '../../assets/styles/variables';
+
+
+button.wallet-container.btn.btn-primary {
+    font-family: $--worksans-semibold;
+    font-size: 18px;
+    padding: 17px 37.5px;
+    line-height: 24px;
+    color: $white;
+    background-color: $primary;
+    font-weight: 600;
+    border: none;
+    border-radius: 60px;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+    @include primary();
+    @media only screen and (max-width: $--breakpoints-sm) {
+        margin-right: 8px;
+    }
+    &:hover {
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 200ms;
+        color: $white;
+        background-color: $--hover-color;
+        @include primary();
+    }
+    &:focus {
+        color: $white;
+        background-color: $--hover-color;
+        border: none;
+        box-shadow: none;
+    }
+}
+//  fix style
+.text-wrapper p {
+    font-family: $--worksans-medium;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $body;
+}

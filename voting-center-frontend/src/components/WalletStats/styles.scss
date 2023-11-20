@@ -1,0 +1,43 @@
+@import '../../assets/styles/variables';
+
+.adaWallet-text-top {
+    font-family: $--worksans-regular;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: $body;
+    @media only screen and (max-width: $--breakpoints-md) {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+.adaWallet-text-middle {
+    font-family: $--poppins-bold;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 50px;
+    color: $headings;
+    @media only screen and (max-width: $--breakpoints-md) {
+        font-size: 24px;
+        line-height: 30px;
+    }
+}
+.adaWallet-text-bottom {
+    font-family: $--worksans-regular;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: $headings;
+    @media only screen and (max-width: $--breakpoints-md) {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+.red-letters {
+    .adaWallet-text-middle,
+    .adaWallet-text-bottom {
+        color: red;
+    }
+}

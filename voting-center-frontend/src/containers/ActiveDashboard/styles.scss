@@ -1,0 +1,89 @@
+@import '../../assets/styles/variables';
+
+.active-dashboard-wrapper {
+    background-color: $background;
+
+    .dashboard-header {
+        font-family: $--poppins-bold;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 52px;
+        color: $headings;
+        margin-bottom: 32px;
+        @media only screen and (max-width: $--breakpoints-md) {
+            margin: 0 0 24px 0;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 32px;
+        }
+    }
+
+    .wallet-wrapper {
+        .wallet-info {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                font-family: $--worksans-regular;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 30px;
+                color: $body;
+                margin-bottom: 18px;
+                @media only screen and (max-width: $--breakpoints-md) {
+                    font-size: 16px;
+                    line-height: 28px;
+                }
+            }
+
+            p {
+                font-family: $--poppins-bold;
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 58px;
+                color: $headings;
+                margin-top: auto;
+                @media only screen and (max-width: $--breakpoints-md) {
+                    font-size: 24px;
+                    line-height: 34px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: $--breakpoints-sm) {
+        padding: 16px 16px !important;
+    }
+}
+
+.card-item-single {
+    padding-top: 83px;
+    @media only screen and (max-width: $--breakpoints-md) {
+        padding-top: 57px;
+    }
+}
+
+.pub-add {
+    padding: 32px;
+    box-shadow: 0px 1px 42px rgb(52 93 200 / 6%),
+        0px 1px 3px rgb(87 119 168 / 10%);
+    border-radius: 8px;
+
+    h3 {
+        font-family: 'Poppins Bold';
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    p {
+        margin-top: 12px;
+        color: #576788;
+        font-family: 'Work Sans Regular';
+        font-size: 18px;
+    }
+
+    button {
+        max-width: 80px;
+    }
+}

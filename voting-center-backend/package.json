@@ -1,0 +1,38 @@
+{
+  "name": "voting-center-backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "cs": "config-sync",
+    "strapi-import": "strapi import -f gvc_data_20230412142821.tar.gz --force",
+    "import-and-develop": "npm run strapi-import && npm run develop",
+    "import-and-start": "npm run strapi-import && npm run start"
+  },
+  "dependencies": {
+    "@strapi/plugin-graphql": "^4.3.3",
+    "@strapi/plugin-i18n": "4.7.0",
+    "@strapi/plugin-sentry": "^4.3.9",
+    "@strapi/strapi": "4.7.0",
+    "bad-words": "^3.0.4",
+    "cbor": "^8.1.0",
+    "crypto-js": "^4.1.1",
+    "node-gyp": "^9.1.0",
+    "pg": "8.6.0",
+    "sharp": "^0.32.1",
+    "strapi-plugin-config-sync": "^1.0.4",
+    "strapi-plugin-migrations": "^1.0.4"
+  },
+  "strapi": {
+    "uuid": "0cb0b309-4d9a-40dc-ad27-d0d2d01e2ef5"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

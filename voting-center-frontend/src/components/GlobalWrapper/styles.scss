@@ -1,0 +1,74 @@
+@import '../../assets/styles/variables';
+
+.container-wrapper {
+    padding: 20px 40px !important;
+    background-color: $background;
+}
+.safety-check, .refresh-wallet-balance {
+    position: fixed;
+    width: fit-content;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 20px;
+    left: 36%;
+}
+
+@media only screen and (max-width: $--breakpoints-md) {
+    .container-wrapper {
+        padding: 16px !important;
+    }
+
+    .safety-check{
+        top: 12px;
+        left: 0;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) and (orientation: landscape) {
+    body {
+        overflow-y: scroll;
+    }
+}
+
+.main-scroll {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: calc(100vh - 100px);
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (hover: none) and (pointer: coarse) and (orientation: landscape) {
+        height: unset;
+        overflow-y: unset;
+    }
+
+    @media screen and (max-width: $--breakpoints-md) and (orientation: portrait) {
+        height: calc(100vh - 200px);
+    }
+
+    /* width */
+    &::-webkit-scrollbar {
+        width: 18px;
+        @media only screen and (max-width: $--breakpoints-md) {
+            width: 0;
+        }
+    }
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: rgba(26, 26, 26, 0.1);
+        border-radius: 100px;
+        border: 7px solid $background;
+    }
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgba(26, 26, 26, 0.2);
+    }
+}

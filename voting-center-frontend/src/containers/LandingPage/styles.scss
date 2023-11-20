@@ -1,0 +1,29 @@
+@import '../../assets/styles/variables';
+
+.drep-info-landing {
+    @media only screen and (max-width: 768px) {
+        .drep-wrapper .drep-content {
+            padding-top: 0;
+            min-height: 100%;
+        }
+        .align-items-end {
+            align-items: flex-start !important;
+        }
+        .drep-wrapper {
+            margin-top: 48px;
+            min-height: 40vh;
+        }
+    }
+    .drep-wrapper {
+        padding-top: unset;
+
+        @media only screen and (min-width: $--breakpoints-md) {
+            padding: 102px 0;
+        }
+        .drep-btn-wrapper {
+            @media only screen and (max-width: $--breakpoints-md) {
+                position: unset;
+            }
+        }
+    }
+}

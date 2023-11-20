@@ -1,0 +1,39 @@
+@import '../../assets/styles/variables';
+
+.sidebarLinks {
+    font-family: $--worksans-semibold;
+    color: $body;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 20px 0px 20px 22px;
+    &:hover {
+        color: $body;
+    }
+}
+
+.sidebar-links-regular{
+    font-family: $--worksans-regular;
+    color: $body;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 20px 0px 20px 22px;
+    &:hover {
+        color: $body;
+    }
+}
+
+.activeState {
+    color: $headings !important;
+    background-color: $ghost;
+    border-radius: 12px;
+    padding: 20px 0px 20px 22px;
+}
+
+.link-margin {
+    margin-right: 42px;
+}
+
+.no-icon{
+    width: 24px;
+    height: 24px;
+}

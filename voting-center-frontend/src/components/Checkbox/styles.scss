@@ -1,0 +1,104 @@
+@import '../../assets/styles/variables';
+
+.checkbox-wrapper {
+    max-width: fit-content;
+    font-family: $--worksans-medium;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: $headings;
+
+    &.form-check-reverse {
+        .form-check-input {
+            margin-left: 12px;
+        }
+    }
+
+    &.form-check {
+        margin-bottom: unset;
+    }
+
+    .form-check-input {
+        &[type='checkbox'] {
+            background-color: $foreground;
+            border-color: $foreground;
+            @include shadow-sm();
+
+            width: 24px;
+            height: 24px;
+            margin-top: unset;
+            margin-right: 12px;
+            border-radius: 8px;
+
+            &:checked,
+            &:indeterminate {
+                background-color: $primary;
+                border-color: $primary;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            &:disabled,
+            &[disabled] {
+                background-image: none;
+                background-color: $baseLight-100;
+                opacity: 1;
+                box-shadow: none;
+                border: 1px $baseLight-100;
+
+                ~ .form-check-label {
+                    color: $baseLight-400;
+                    opacity: 1;
+                    cursor: default;
+                }
+            }
+        }
+    }
+
+    &.form-check-sm {
+        font-size: 14px;
+        line-height: 20px;
+
+        &.form-check-reverse {
+            .form-check-input {
+                margin-left: 10px;
+            }
+        }
+
+        .form-check-input {
+            &[type='checkbox'] {
+                border-color: $baseLight-200;
+                width: 18px;
+                height: 18px;
+                margin-top: unset;
+                margin-right: 10px;
+                border-radius: 6px;
+                background-color: $baseLight-50;
+            }
+
+            &:checked,
+            &:indeterminate {
+                background-color: $primary;
+                border-color: $primary;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            &:disabled,
+            &[disabled] {
+                background-color: $baseLight-50;
+                border-color: $baseLight-50;
+
+                ~ .form-check-label {
+                    color: $baseLight-400;
+                    opacity: 1;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}

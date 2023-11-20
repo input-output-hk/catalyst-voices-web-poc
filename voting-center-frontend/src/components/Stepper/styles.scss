@@ -1,0 +1,100 @@
+@import '../../assets/styles/variables';
+
+.stepper {
+    padding: 30px 20px 0 14px;
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: 0px 1px 42px rgba(52, 93, 200, 0.06),
+        0px 1px 3px rgba(87, 119, 168, 0.1);
+
+    .stepper-title {
+        font-family: $--poppins-bold;
+        font-size: 24px;
+        line-height: 34px;
+        font-weight: 700;
+        margin-left: 40px;
+        margin-bottom: 40px;
+    }
+
+    .step-content {
+        position: relative;
+        padding-bottom: 30px;
+
+        .step-check-container {
+            position: relative;
+            margin-right: 20px;
+            .step-check {
+                z-index: 10;
+                position: absolute;
+            }
+
+            .step-check-active {
+                fill: $greenLight;
+            }
+            .step-check-completed {
+                fill: $primary;
+            }
+            .step-check-uncompleted {
+                fill: $foreground;
+            }
+        }
+
+        .current-step-text {
+            font-family: $--worksans-semibold;
+            color: $greenLight;
+            font-size: 14px;
+            line-height: 30px;
+            font-weight: 600;
+        }
+
+        .phase-number {
+            font-family: $--worksans-regular;
+            color: #576788;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            margin-bottom: 0;
+            margin-top: -24px;
+        }
+
+        .step-name {
+            font-family: $--worksans-semibold;
+            color: $headings;
+            font-size: 18px;
+            line-height: 30px;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+        .step-description {
+            font-family: $--worksans-regular;
+            color: $body;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            margin-bottom: 20px;
+            white-space: pre-line;
+        }
+
+        .steps-line {
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            left: 21px;
+            margin-top: 6px;
+            z-index: 1;
+        }
+
+        .steps-line-completed {
+            background-color: $primary;
+        }
+
+        .steps-line-active {
+            background-color: $foreground;
+        }
+
+        .steps-line-uncompleted {
+            background-color: $foreground;
+        }
+    }
+}

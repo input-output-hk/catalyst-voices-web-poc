@@ -1,0 +1,113 @@
+@import '../../assets/styles/variables';
+
+.profile-container {
+    position: relative;
+
+    .profile-button {
+        background-color: white;
+        @include box-shadow-shadow-sm();
+        border-radius: 12px;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 200ms;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-gap: 10px;
+
+        .dots{
+            cursor: pointer;
+        }
+
+        .balance-wrapper {
+            border-right: 1px solid $ghost;
+            padding-right: 24px;
+
+            .refresh-icon{
+                &:hover{
+                    path {
+                        stroke: $primary;
+                    }
+                }
+                &-rotate{
+                    animation-name: rotate;
+                    animation-duration: 1s;
+                    animation-timing-function: linear;
+                }
+            }
+
+            .balance {
+                font-family: $--worksans-medium;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                color: $headings;
+                margin: 0;
+            }
+
+            .address {
+                font-family: $--roboto-regular;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 16px;
+                color: $body;
+                margin: 0;
+                letter-spacing: 0.02em;
+            }
+        }
+
+        .profile-button-avatar {
+            width: 36px;
+            height: 36px;
+            min-width: 36px;
+            min-height: 36px;
+        }
+
+        .avatar-component-wrapper{
+            .initials {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .profile-button-items {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        z-index: 200;
+        cursor: pointer;
+        width: 100%;
+        box-shadow: 0px 1px 3px rgba(87, 119, 168, 0.1),
+            0px 10px 10px -5px rgba(87, 119, 168, 0.04),
+            0px 20px 25px -5px rgba(87, 119, 168, 0.1);
+        border-radius: 8px;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+        background-color: $white;
+
+        li {
+            font-family: $--worksans-medium;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: $body;
+            padding: 0px 30px 0px 16px;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                color: $headings;
+            }
+        }
+    }
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(360deg)}
+}

@@ -1,0 +1,16 @@
+@import '../../styles/variables';
+
+svg.arrow-container {
+    &:hover {
+        cursor: pointer;
+    }
+    circle {
+        &:hover {
+            fill: $foreground;
+        }
+    }
+
+    &.arrow-left {
+        transform: rotate(180deg);
+    }
+}

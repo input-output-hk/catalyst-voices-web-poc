@@ -1,0 +1,102 @@
+@import '../../assets/styles/variables';
+
+.drep-registration {
+    .drep-link {
+        color: $primary;
+    }
+    .drep-header {
+        @media only screen and (max-width: $--breakpoints-lg) {
+            .button-component {
+                padding: 10px 16px;
+                max-height: unset;
+            }
+        }
+    }
+    .drep-heading {
+        font-family: $--poppins-bold;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 52px;
+        color: $headings;
+
+        @media only screen and (max-width: $--breakpoints-lg) {
+            font-family: $--poppins-bold;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 32px;
+            color: $headings;
+        }
+    }
+
+    .drep-button-section {
+        @media only screen and (max-width: $--breakpoints-lg) {
+            .button-component {
+                width: 100%;
+                max-height: unset;
+
+                h5 {
+                    font-size: 18px;
+                }
+            }
+
+            .drep-buttons {
+                width: 100%;
+            }
+        }
+    }
+
+    .drep-heading-steps {
+        font-family: $--worksans-semibold;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: $body;
+
+        &::first-letter {
+            color: $headings;
+        }
+    }
+
+    .dreps-tags-heading {
+        font-family: $--worksans-medium;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: $body;
+    }
+
+    .dreps-tags-subheading {
+        font-family: $--worksans-regular;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: $body;
+    }
+
+    .drep-tags-wrapper {
+        gap: 16px;
+    }
+
+    .first-step {
+        input {
+            &.form-control.is-invalid:not(.username)[focused='true'],
+            &.form-control:invalid:not(.username)[focused='true'],
+            &.form-control:invalid:focus:not(.username)[focused='true'],
+            &.form-control.is-invalid:focus:not(.username)[focused='true'] {
+                border-color: $redLight-400;
+                background-image: none;
+                background-color: $greyLight-50;
+                @include box-shadow-shadow-sm();
+            }
+
+            &.form-control.username.is-invalid[focused='true'],
+            &.form-control.username:invalid[focused='true'],
+            &.form-control.username:invalid:focus[focused='true'],
+            &.form-control.username.is-invalid:focus[focused='true'] {
+                background-image: none;
+                background-color: $greyLight-50;
+                box-shadow: none;
+            }
+        }
+    }
+}

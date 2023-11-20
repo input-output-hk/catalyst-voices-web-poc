@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "tag": {
+            "name": "Climate"
+        }
+    },
+    {
+        "id": 2,
+        "tag": {
+            "name": "Dapps and Integrations"
+        }
+    },
+    {
+        "id": 3,
+        "tag": {
+            "name": "SSI"
+        }
+    },
+    {
+        "id": 4,
+        "tag": {
+            "name": "Onboarding"
+        }
+    },
+    {
+        "id": 5,
+        "tag": {
+            "name": "Developer Ecosystem"
+        }
+    },
+    {
+        "id": 6,
+        "tag": {
+            "name": "Open Source"
+        }
+    },
+    {
+        "id": 7,
+        "tag": {
+            "name": "Gaming"
+        }
+    },
+    {
+        "id": 8,
+        "tag": {
+            "name": "DeFi"
+        }
+    },
+    {
+        "id": 9,
+        "tag": {
+            "name": "Business Solutions"
+        }
+    },
+    {
+        "id": 10,
+        "tag": {
+            "name": "Latin America"
+        }
+    },
+    {
+        "id": 11,
+        "tag": {
+            "name": "Africa"
+        }
+    },
+    {
+        "id": 12,
+        "tag": {
+            "name": "East Asia"
+        }
+    },
+    {
+        "id": 13,
+        "tag": {
+            "name": "Law and Legislation"
+        }
+    }
+]

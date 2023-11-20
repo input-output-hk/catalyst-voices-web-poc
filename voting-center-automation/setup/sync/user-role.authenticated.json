@@ -1,0 +1,139 @@
+{
+  "name": "Authenticated",
+  "description": "Default role given to authenticated user.",
+  "type": "authenticated",
+  "permissions": [
+    {
+      "action": "api::setting.setting.create"
+    },
+    {
+      "action": "api::setting.setting.update"
+    },
+    {
+      "action": "api::delegation.delegation.create"
+    },
+    {
+      "action": "api::delegation.delegation.delete"
+    },
+    {
+      "action": "api::delegation.delegation.find"
+    },
+    {
+      "action": "api::delegation.delegation.findOne"
+    },
+    {
+      "action": "api::delegation.delegation.update"
+    },
+    {
+      "action": "api::drep-privacy-policy.drep-privacy-policy.create"
+    },
+    {
+      "action": "api::drep-privacy-policy.drep-privacy-policy.delete"
+    },
+    {
+      "action": "api::drep-privacy-policy.drep-privacy-policy.find"
+    },
+    {
+      "action": "api::drep-privacy-policy.drep-privacy-policy.findOne"
+    },
+    {
+      "action": "api::drep-privacy-policy.drep-privacy-policy.update"
+    },
+    {
+      "action": "api::drep-tos-policy.drep-tos-policy.create"
+    },
+    {
+      "action": "api::drep-tos-policy.drep-tos-policy.delete"
+    },
+    {
+      "action": "api::drep-tos-policy.drep-tos-policy.find"
+    },
+    {
+      "action": "api::drep-tos-policy.drep-tos-policy.findOne"
+    },
+    {
+      "action": "api::drep-tos-policy.drep-tos-policy.update"
+    },
+    {
+      "action": "api::drep.drep.create"
+    },
+    {
+      "action": "api::drep.drep.delete"
+    },
+    {
+      "action": "api::drep.drep.find"
+    },
+    {
+      "action": "api::drep.drep.findOne"
+    },
+    {
+      "action": "api::drep.drep.update"
+    },
+    {
+      "action": "api::privacy-policy.privacy-policy.create"
+    },
+    {
+      "action": "api::privacy-policy.privacy-policy.delete"
+    },
+    {
+      "action": "api::privacy-policy.privacy-policy.find"
+    },
+    {
+      "action": "api::privacy-policy.privacy-policy.findOne"
+    },
+    {
+      "action": "api::privacy-policy.privacy-policy.update"
+    },
+    {
+      "action": "api::terms-and-condition.terms-and-condition.create"
+    },
+    {
+      "action": "api::terms-and-condition.terms-and-condition.delete"
+    },
+    {
+      "action": "api::terms-and-condition.terms-and-condition.find"
+    },
+    {
+      "action": "api::terms-and-condition.terms-and-condition.findOne"
+    },
+    {
+      "action": "api::terms-and-condition.terms-and-condition.update"
+    },
+    {
+      "action": "api::transaction.transaction.create"
+    },
+    {
+      "action": "api::transaction.transaction.delete"
+    },
+    {
+      "action": "api::transaction.transaction.find"
+    },
+    {
+      "action": "api::transaction.transaction.findOne"
+    },
+    {
+      "action": "api::transaction.transaction.update"
+    },
+    {
+      "action": "api::voter.voter.create"
+    },
+    {
+      "action": "api::voter.voter.delete"
+    },
+    {
+      "action": "api::voter.voter.find"
+    },
+    {
+      "action": "api::voter.voter.findOne"
+    },
+    {
+      "action": "api::voter.voter.update"
+    },
+    {
+      "action": "plugin::users-permissions.auth.changePassword"
+    },
+    {
+      "action": "plugin::users-permissions.user.me"
+    }
+  ]
+}

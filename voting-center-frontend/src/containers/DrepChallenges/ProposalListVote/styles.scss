@@ -1,0 +1,48 @@
+@import '../../../assets/styles/variables';
+
+.drep-list-vote {
+    .back {
+        font-family: $--poppins-semibold;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 34px;
+        grid-gap: 12px;
+        margin-bottom: 24px;
+        color: #000;
+    }
+
+    .header {
+        font-family: $--poppins-bold;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 34px;
+        color: $primary;
+        margin-bottom: 8px;
+    }
+
+    .text {
+        font-family: $--worksans-regular;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: $body;
+        margin-bottom: 42px;
+    }
+
+    .proposals-list-no-result {
+        h3 {
+            font-family: $--poppins-bold;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 45px;
+            color: $headings;
+        }
+        p {
+            font-family: $--worksans-regular;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: $body;
+        }
+    }
+}

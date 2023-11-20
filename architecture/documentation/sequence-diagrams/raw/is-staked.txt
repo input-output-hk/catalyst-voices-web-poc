@@ -1,0 +1,18 @@
+title Determine Stake Status
+
+participant GVC Frontend
+participant Wallet
+participant Blockfrost
+
+GVC Frontend->Wallet: **cip62API.getRewardAddresses()**
+Wallet->GVC Frontend: **[address]**
+
+GVC Frontend->GVC Frontend: Convert address to bech32
+
+note over GVC Frontend: Iteratre for each **address**
+GVC Frontend->Blockfrost: **GET api/v0/accounts/{address}
+
+Blockfrost->GVC Frontend: **Response**
+
+note over GVC Frontend: IF **[Response].active** == **true** THEN staked
+note over GVC Frontend: ELSE not staked

@@ -1,0 +1,114 @@
+@import '../../assets/styles/variables';
+
+.drep-list {
+    display: flex;
+    .tags-list {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        gap: 16px;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .drep-sort {
+        p {
+            color: $body;
+            font-family: $--worksans-regular;
+            font-weight: 600;
+        }
+
+        // Custom breakpoint for better responsiveness {
+        .sort-content {
+            @media only screen and (max-width: 500px) {
+                flex: 0 0 auto;
+                width: 100%;
+                justify-content: center !important;
+            }
+        }
+        .sort-result {
+            @media only screen and (max-width: 500px) {
+                flex: 0 0 auto;
+                width: 100%;
+                justify-content: flex-start !important;
+                margin-top: 16px !important;
+            }
+        }
+    }
+
+    .tag-list-container {
+        position: relative;
+
+        .scroll-button {
+            z-index: 100;
+            position: absolute;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            height: fit-content;
+        }
+
+        .scroll-button-left {
+            left: 0;
+            top: 6px;
+            display: flex;
+            .arrow-div {
+                background-color: #f8f9fc;
+                height: 60px;
+                display: flex;
+                align-items: center;
+            }
+            .arrow-shadow {
+                width: 40px;
+                height: 60px;
+                background: linear-gradient(
+                    90deg,
+                    #f8f9fc 0%,
+                    rgba(248, 249, 252, 0) 100%
+                );
+            }
+        }
+
+        .scroll-button-right {
+            right: 0;
+            top: 6px;
+            display: flex;
+            .arrow-div {
+                background-color: #f8f9fc;
+                height: 60px;
+                display: flex;
+                align-items: center;
+            }
+            .arrow-shadow {
+                width: 40px;
+                height: 60px;
+                background: linear-gradient(
+                    270deg,
+                    #f8f9fc 0%,
+                    rgba(248, 249, 252, 0) 100%
+                );
+            }
+        }
+    }
+
+    .drep-list-no-result {
+        h3 {
+            font-family: $--poppins-bold;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 45px;
+            color: $headings;
+        }
+
+        p {
+            font-family: $--worksans-regular;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: $body;
+        }
+    }
+}

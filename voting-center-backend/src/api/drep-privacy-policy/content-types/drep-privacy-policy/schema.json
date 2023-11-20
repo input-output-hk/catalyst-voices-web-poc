@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "drep_privacy_policies",
+  "info": {
+    "singularName": "drep-privacy-policy",
+    "pluralName": "drep-privacy-policies",
+    "displayName": "Drep privacy policy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "accepted_at": {
+      "type": "datetime",
+      "required": true
+    },
+    "drep_id": {
+      "type": "integer",
+      "required": true
+    },
+    "privacy_policy_id": {
+      "type": "integer"
+    }
+  }
+}

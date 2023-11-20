@@ -1,0 +1,86 @@
+@import '../../assets/styles/variables';
+
+.small-modal {
+    button.button-component {
+        min-width: 125px;
+        @media only screen and (max-width: $--breakpoints-sm) {
+            padding: 10px 16px;
+            max-height: none;
+            min-width: 90px;
+        }
+        @media only screen and (min-width: $--breakpoints-sm) {
+            padding: 13px 10px;
+            max-height: none;
+        }
+        @media only screen and (min-width: $--breakpoints-md) {
+            padding: 13px 16px;
+            max-height: none;
+        }
+        h5 {
+            @media only screen and (min-width: $--breakpoints-sm) {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    .modal {
+        padding: 0;
+    }
+
+    .modal-body {
+        display: flex;
+        flex-direction: column;
+
+        .one-button-wrapper {
+            min-width: 100%;
+
+            .small-modal-one-button {
+                min-width: 100%;
+            }
+        }
+    }
+
+    .small-modal-text {
+        font-family: $--worksans-regular;
+        color: $body;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .modal-dialog {
+        max-width: 360px;
+        margin: auto;
+
+        .modal-content {
+            .modal-header {
+                flex-direction: row-reverse;
+            }
+            .modal-title {
+                font-family: $--poppins-bold;
+                color: $headings;
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 45px;
+            }
+        }
+    }
+
+    .btn-close {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        opacity: 1;
+        box-sizing: border-box;
+        padding: unset;
+        margin: unset;
+        background: $background
+            url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23576788%27%3e%3cpath d=%27M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z%27/%3e%3c/svg%3e')
+            center/15px auto no-repeat;
+
+        &:hover {
+            background-color: $ghost;
+        }
+    }
+}

@@ -1,0 +1,150 @@
+@import '../../assets/styles/variables';
+
+.dropDownNav {
+    .dropDownButton {
+        background-color: $white;
+        border-radius: 8px;
+        padding: 20px 23px;
+        filter: none;
+        box-shadow: 0px 1px 42px rgba(52, 93, 200, 0.06),
+            0px 1px 3px rgba(87, 119, 168, 0.1);
+        &:hover {
+            box-shadow: none;
+        }
+        &:focus {
+            box-shadow: none;
+        }
+        &:active {
+            box-shadow: none;
+        }
+        p {
+            color: $body;
+            font-size: 16px;
+            line-height: 24px;
+            font-family: $--worksans-semibold;
+        }
+    }
+
+    p {
+        color: $body;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: $--worksans-semibold;
+        font-weight: 600;
+    }
+
+    .dropdown-toggle {
+        color: $feint;
+    }
+    .btn-primary {
+        border: none;
+    }
+    .btn-primary:hover {
+        background-color: $white !important;
+    }
+
+    .dropdown-menu {
+        padding-top: 20px;
+        box-shadow: 0px 1px 42px rgba(52, 93, 200, 0.06),
+            0px 1px 3px rgba(87, 119, 168, 0.1) !important;
+    }
+
+    .dropdown-item {
+        padding: 20px 23px;
+        &:active {
+            background-color: transparent;
+        }
+    }
+}
+
+.dropDownNavSmaller {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+    .dropDownButton {
+        background-color: $white;
+        border-radius: 8px;
+        padding: 19px;
+        filter: none;
+        @include box-shadow-profile-card();
+        &:hover {
+            box-shadow: none;
+        }
+        .dropDownNavMain {
+            p {
+                color: $body;
+                font-size: 16px;
+                line-height: 24px;
+                font-family: $--worksans-semibold;
+                font-weight: 600;
+            }
+        }
+
+        &::after {
+            color: $feint;
+            margin-left: 16px;
+        }
+    }
+    //Touchscreen devices covered
+    @media (hover: none) and (pointer: coarse) {
+        .dropDownButton:hover {
+            @include box-shadow-profile-card();
+        }
+    }
+
+    p {
+        color: $body;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: $--worksans-semibold;
+        font-weight: 600;
+    }
+
+    .dropdown-toggle {
+        color: $feint;
+    }
+    .btn-primary {
+        border: none;
+    }
+    .btn-primary:hover {
+        background-color: $white !important;
+    }
+
+    .dropdown-menu {
+        padding-top: 20px;
+        box-shadow: 0px 1px 42px rgba(52, 93, 200, 0.06),
+            0px 1px 3px rgba(87, 119, 168, 0.1) !important;
+    }
+
+    .dropDownNavMenu {
+        // margin-top: 10px;
+        padding: 16px;
+    }
+
+    .dropdown-item {
+        padding: 10px 16px;
+
+        .dropdown-item-style {
+            p {
+                color: $baseLight-700;
+                font-size: 16px;
+                line-height: 24px;
+                font-family: $--worksans-medium;
+                font-weight: 500;
+            }
+            &:hover {
+                p {
+                    color: $body;
+                }
+            }
+        }
+        &:active {
+            background-color: transparent;
+        }
+
+        &:hover {
+            background-color: $background;
+            border-radius: 12px;
+        }
+    }
+}

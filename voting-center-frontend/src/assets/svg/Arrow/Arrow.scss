@@ -1,0 +1,7 @@
+@import '../../styles/variables';
+
+svg.arrows-wrapper {
+    &.left-arrow {
+        transform: rotate(180deg);
+    }
+}

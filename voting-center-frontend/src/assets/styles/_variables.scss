@@ -1,0 +1,178 @@
+// Fonts
+$--worksans-semibold: 'Work Sans SemiBold';
+$--worksans-medium: 'Work Sans Medium';
+$--worksans-regular: 'Work Sans Regular';
+$--worksans-bold: 'Work Sans Bold';
+$--poppins-bold: 'Poppins Bold';
+$--poppins-semibold: 'Poppins SemiBold';
+$--roboto-regular: 'Roboto Mono Regular';
+
+// Breakpoints
+
+$--breakpoints-xs: 0px;
+$--breakpoints-sm: 576px;
+$--breakpoints-md: 1000px;
+$--breakpoints-lg: 1100px;
+$--breakpoints-xl: 1200px;
+$--breakpoints-xxl: 1400px;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 1000px,
+    lg: 1100px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+////////////////////////////////////////////////////////
+// Font face
+
+@font-face {
+    font-family: 'Work Sans Thin', sans-serif;
+    src: url('../fonts/WorkSans/WorkSans-Thin.ttf');
+    font-style: normal;
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'Work Sans ExtraLight', sans-serif;
+    src: url('../fonts/WorkSans/WorkSans-ExtraLight.ttf');
+    font-style: normal;
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'Work Sans Light', sans-serif;
+    src: url('../fonts/WorkSans/WorkSans-Light.ttf');
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Work Sans Regular';
+    src: url('../fonts/WorkSans/WorkSans-Regular.ttf');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Work Sans Medium';
+    src: url('../fonts/WorkSans/WorkSans-Medium.ttf');
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Work Sans SemiBold';
+    src: url('../fonts/WorkSans/WorkSans-SemiBold.ttf');
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Work Sans SemiBold', sans-serif;
+    src: url('../fonts/WorkSans/WorkSans-Bold.ttf');
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Work Sans ExtraBold', sans-serif;
+    src: url('../fonts/WorkSans/WorkSans-ExtraBold.ttf');
+    font-style: normal;
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Work Sans Black', sans-serif;
+    src: url('../fonts/WorkSans/WorkSans-Black.ttf');
+    font-style: normal;
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Work Sans Bold';
+    src: url('../fonts/WorkSans/WorkSans-Bold.ttf');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url('../fonts/Poppins/Poppins-Bold.ttf');
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Poppins SemiBold';
+    src: url('../fonts/Poppins/Poppins-SemiBold.ttf');
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Roboto Mono Regular';
+    src: url('../fonts/RobotoMono/RobotoMono-Regular.ttf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+// Colors
+$primary: #7c89f7; // $--main-button-background-color
+$headings: #0d112f; // $--sidebar-active-link-text-color,$--card-headings-text-color, $headings
+$background: #f8f9fc; // $--main-background-color,
+$foreground: #d2d7e8;
+$white: #ffffff; //$--main-button-text-color
+$body: #576788; //$--sidebar-unactive-link-text-color,$--card-content-text-color, $body, $body
+$ghost: #e9edf9; //$--sidebar-active-link-background-color
+$feint: #a0abc0; // $--dropdown-arrow-color
+$baseLight: #1a1a1a;
+$baseLight-50: rgba($baseLight, 0.05);
+$baseLight-100: rgba($baseLight, 0.1);
+$baseLight-200: rgba($baseLight, 0.2);
+$baseLight-400: rgba($baseLight, 0.4);
+$baseLight-500: rgba($baseLight, 0.5);
+$baseLight-700: rgba($baseLight, 0.7);
+$blueLight-300: #91c3fd;
+$blueLight-500: #3479e9;
+$blueLight-600: #2463eb;
+$redLight-400: #fd6b6b;
+$redLight-500: #ef4343;
+$redLight-600: #dc2828;
+$redLight-700: #ba1c1c;
+$greyLight-50: #fdfdfd;
+$greyLight-100: #f4f4f5;
+$greyLight-200: #e4e4e7;
+$action: #c4c4c4;
+$greenLight: #54d37b;
+$greyDelegation: #f9f9f9;
+$--hover-color: #6272f9;
+$catalystLogoColor: #293662;
+
+// Button Disabled
+$disabled-opacity: 0.4;
+$grey-disabled: #e8edef;
+$grey-disabled-darker: #99a0a4;
+
+// Effect styles
+@mixin primary {
+    box-shadow: 0px 14px 34px rgba(124, 137, 247, 0.4);
+}
+
+//Button shadows
+@mixin shadow-sm {
+    filter: drop-shadow(0px 1px 2px rgba(49, 73, 135, 0.06))
+        drop-shadow(0px 1px 3px rgba(52, 93, 200, 0.1));
+}
+
+@mixin box-shadow-shadow-sm {
+    box-shadow: 0px 1px 2px rgba(49, 73, 135, 0.06),
+        0px 1px 3px rgba(52, 93, 200, 0.1);
+}
+
+@mixin box-shadow-profile-card {
+    box-shadow: 0px 1px 42px rgba(52, 93, 200, 0.06),
+        0px 1px 3px rgba(87, 119, 168, 0.1);
+}
+
+@mixin box-shadow-shadow-xl {
+    box-shadow: 0px 1px 3px rgba(87, 119, 168, 0.1),
+        0px 10px 10px -5px rgba(87, 119, 168, 0.04),
+        0px 20px 25px -5px rgba(87, 119, 168, 0.1);
+}
+
+@mixin box-shadow-shadow-m {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.06),
+        0px 4px 6px -1px rgba(0, 0, 0, 0.08);
+}

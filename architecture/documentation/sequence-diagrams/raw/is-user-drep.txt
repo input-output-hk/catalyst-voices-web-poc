@@ -1,0 +1,14 @@
+title Is user dRep?
+
+participant GVC Frontend
+participant GVC Backend
+
+GVC Frontend->GVC Backend: **GET /api/dreps/{PublicKey}**
+GVC Backend->GVC Frontend: **Response**
+
+note over GVC Frontend: IF **Response == 404** THEN user NOT dRep
+
+note over GVC Frontend: IF **Response == 200** AND
+note over GVC Frontend: **.is_approved == False** THEN user unapproved dRep
+
+note over GVC Frontend: ELSE user is approved dRep

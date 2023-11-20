@@ -1,0 +1,112 @@
+@import '../../assets/styles/variables';
+
+.filters {
+    font-family: $--worksans-semibold;
+    background: $ghost;
+    @include box-shadow-shadow-sm();
+    border-radius: 8px;
+    color: $body;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 6px 16px;
+    border: 2px solid transparent;
+
+    &:hover,
+    &:focus,
+    &:active {
+        box-shadow: none !important;
+        border-radius: 8px;
+        background: $white;
+        border: 2px solid $blueLight-300;
+        color: $blueLight-600;
+        outline: none;
+    }
+}
+
+.filters-card {
+    background-color: $white;
+    border-radius: 8px;
+    @include box-shadow-profile-card();
+    border: none;
+    &-wrapper {
+        width: 100%;
+
+        h2 {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 30px;
+            color: $body;
+            text-align: start;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            border-bottom: 1px solid $ghost;
+
+            p {
+                margin: 0;
+            }
+        }
+
+        .filters-main {
+            grid-gap: 46px;
+            margin-top: 18px;
+
+            label {
+                font-family: $--worksans-regular;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 28px;
+                color: $body;
+            }
+
+            .border-bottom-custom {
+                border-bottom: 1px solid $ghost;
+            }
+        }
+
+        .filter-buttons {
+            p {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 28px;
+                color: $body;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .apply-filters-button {
+                @include primary();
+
+                @media only screen and (max-width: $--breakpoints-md) {
+                    width: 100%;
+                    max-height: unset;
+                    padding: 14px 16px;
+
+                    h5 {
+                        font-family: $--worksans-semibold;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.input-background {
+    background: $background;
+    border-radius: 8px;
+    padding: 5px 8px;
+    margin-left: -5px;
+}

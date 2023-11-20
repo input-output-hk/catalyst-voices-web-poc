@@ -1,0 +1,53 @@
+@import '../../assets/styles/variables';
+
+.challenges-voter-info {
+    margin-bottom: 48px;
+
+    .transaction-hash-link{
+        max-width: fit-content !important;
+    }
+
+    .dreps-wallet-info {
+        display: flex;
+        flex-direction: column;
+        span {
+            font-family: $--worksans-regular;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: $body;
+            margin-bottom: 18px;
+            @media only screen and (max-width: $--breakpoints-md) {
+                font-size: 16px;
+                line-height: 28px;
+            }
+        }
+        p {
+            font-family: $--poppins-bold;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 58px;
+            color: $headings;
+            margin-top: auto;
+            @media only screen and (max-width: $--breakpoints-md) {
+                font-size: 36px;
+                line-height: 34px;
+            }
+        }
+    }
+
+    .dreps-challenges-header {
+        font-family: $--poppins-bold;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 52px;
+        color: $headings;
+        margin-bottom: 50px;
+        @media only screen and (max-width: $--breakpoints-md) {
+            margin: 32px 0 24px 0;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 32px;
+        }
+    }
+}

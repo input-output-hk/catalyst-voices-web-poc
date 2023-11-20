@@ -1,0 +1,54 @@
+VERSION 0.7
+
+deps:
+    FROM node:16-alpine
+
+    WORKDIR /app
+    ENV NODE_ENV production
+
+    # Install dependencies
+    RUN apk update && \
+        apk add \
+        build-base \
+        gcc \
+        autoconf \
+        automake \
+        zlib-dev \
+        libpng-dev \
+        nasm \
+        bash \
+        vips-dev
+
+    COPY ./package*.json ./
+    RUN npm install
+
+    SAVE IMAGE --cache-hint
+
+build:
+    FROM +deps
+
+    ARG env=dev
+
+    COPY . .
+
+    SAVE ARTIFACT /app /app
+
+docker:
+    FROM node:16-alpine
+
+    WORKDIR /app
+    ENV NODE_ENV production
+    ARG env=dev
+
+    # Install runtime deps
+    RUN apk update && \
+        apk add \
+        vips-dev
+
+    COPY (+build/app --env=${env}) /app
+
+    CMD ["npm", "run", "install"]
+
+    ARG registry
+    ARG tag=latest
+    SAVE IMAGE --push ${registry}voting-center-automation:${tag}

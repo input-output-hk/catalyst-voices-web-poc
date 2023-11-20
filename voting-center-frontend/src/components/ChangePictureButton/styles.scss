@@ -1,0 +1,42 @@
+@import '../../assets/styles/variables';
+
+.change-picture-button {
+    input[type='file'] {
+        display: none;
+    }
+
+    width: fit-content;
+    font-family: $--worksans-semibold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid $ghost;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $ghost;
+    color: $body;
+
+    &:hover {
+        color: $blueLight-600;
+        border: 2px solid $blueLight-600;
+        background-color: $white;
+    }
+    &:active {
+        color: $blueLight-600;
+        background-color: $white;
+        border: 2px solid $blueLight-300;
+        box-shadow: none;
+    }
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    &:disabled,
+    &[disabled] {
+        color: $baseLight;
+        background-color: $baseLight-200;
+        opacity: $disabled-opacity;
+    }
+}

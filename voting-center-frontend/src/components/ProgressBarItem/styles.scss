@@ -1,0 +1,35 @@
+@import '../../assets/styles/variables';
+
+.progress-bar-heading {
+    font-family: $--worksans-semibold;
+    color: $headings;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 600;
+}
+.progress-bar-text {
+    font-family: $--worksans-regular;
+    color: $body;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.progress-bar-timer {
+    font-family: $--worksans-semibold;
+    color: $headings;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 600;
+}
+
+.voting-phase {
+    padding: 16px 0;
+
+    @media only screen and (max-width: $--breakpoints-md) {
+        background-color: $ghost;
+        border-radius: 12px;
+        padding: 16px;
+        margin: 24px 0;
+    }
+}

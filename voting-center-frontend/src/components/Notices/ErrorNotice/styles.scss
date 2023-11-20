@@ -1,0 +1,39 @@
+@import '../../../assets/styles/variables';
+
+.error-notice {
+    &.message {
+        font-family: $--worksans-semibold;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: $headings;
+        padding: 17px 24px;
+        border-radius: 12px;
+        margin-bottom: 32px;
+        background-color: #fef1f5;
+        @media only screen and (max-width: $--breakpoints-md) {
+            padding: 24px 5px;
+        }
+    }
+
+    h3.message-text {
+        font-family: $--worksans-semibold;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: $headings;
+        border-radius: 12px;
+        background-color: #fef1f5;
+
+        display: flex;
+        align-items: center;
+        white-space: pre-wrap;
+
+        img {
+            padding-right: 16px;
+            @media only screen and (max-width: $--breakpoints-md) {
+                padding-left: 15px;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "id": 4,
+    "name": "Catalyst Fund 4",
+    "starts": "2021-02-17T22:00:00+00:00",
+    "ends": "2021-07-04T11:00:00+00:00",
+    "final": true,
+    "voting_power": {
+        "alg": "threshold_staked_ADA",
+        "min_ada": 450000000,
+        "max_pct": 100.0
+    },
+    "registration": {
+        "deadline": "2021-06-12T11:00:00+00:00",
+        "taken": "2021-06-11T11:00:26+00:00"
+    },
+    "schedule": {
+        "proposal_submission": "2023-02-24T22:00:00+00:00",
+        "refine_proposals": "2023-03-03T22:00:00+00:00",
+        "finalize_proposals": "2023-03-10T22:00:00+00:00",
+        "proposal_assessment": "2023-03-17T19:00:00+00:00",
+        "assessment_qa_start": "2023-03-24T19:00:00+00:00",
+        "voting": "2023-06-15T07:23:06+00:00",
+        "tallying": "2023-06-25T11:23:06+00:00",
+        "tallying_end": "2023-07-05T11:23:06+00:00"
+    },
+    "goals": [],
+    "groups": []
+}

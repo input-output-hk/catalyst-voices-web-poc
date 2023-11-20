@@ -1,0 +1,100 @@
+@import '../../../assets/styles/variables';
+
+label.combo-input-label.form-label {
+    font-family: $--worksans-medium;
+    color: $body;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.input-group.combo-input-group {
+    border: 1px solid transparent;
+    background: $white;
+    border-radius: 8px;
+    text-decoration: none;
+    @include box-shadow-shadow-sm();
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+
+    &.invalid-input {
+        border-color: $redLight-400;
+        text-decoration: none;
+
+        input.combo-input-text {
+            text-decoration: none;
+        }
+
+        .combo-input-icon {
+            background: $greyLight-50 !important;
+        }
+    }
+
+    &:focus-visible {
+        outline: none;
+    }
+
+    .input-group-text.combo-input-icon {
+        background: $white;
+        border: none;
+        border-radius: 8px;
+        color: $feint;
+        font-family: $--worksans-regular;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    &:hover {
+        background: $white;
+        border: 1px solid $greyLight-200;
+        border-radius: 8px;
+        @include box-shadow-shadow-sm();
+
+        &.invalid-input {
+            border-color: $redLight-400;
+            text-decoration: none;
+
+            input.combo-input-text {
+                text-decoration: none;
+            }
+        }
+    }
+
+    input.combo-input-text {
+        box-shadow: none;
+        caret-color: $action;
+        text-decoration: none;
+
+        &.form-control {
+            font-family: $--worksans-regular;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            background: $white;
+            border-radius: 8px;
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 200ms;
+            font-family: $--worksans-regular;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            color: $headings;
+            text-decoration: none;
+
+            &::placeholder {
+                font-family: $--worksans-regular;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 28px;
+                color: $body;
+            }
+
+            &:hover {
+                border: 1px solid transparent;
+            }
+        }
+    }
+}

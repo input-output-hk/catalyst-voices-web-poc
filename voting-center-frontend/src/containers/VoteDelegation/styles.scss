@@ -1,0 +1,256 @@
+@import '../../assets/styles/variables';
+
+.vote-delegation-wrapper {
+    .tags-list {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        gap: 16px;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .drep-sort {
+        p {
+            color: $body;
+            font-family: $--worksans-regular;
+            font-weight: 600;
+        }
+
+        // Custom breakpoint for better responsiveness {
+        .sort-content {
+            @media only screen and (max-width: 500px) {
+                flex: 0 0 auto;
+                width: 100%;
+                justify-content: center !important;
+            }
+        }
+        .sort-result {
+            @media only screen and (max-width: 500px) {
+                flex: 0 0 auto;
+                width: 100%;
+                justify-content: flex-start !important;
+                margin-top: 16px !important;
+            }
+        }
+    }
+
+    .tag-list-container {
+        position: relative;
+
+        .scroll-button {
+            z-index: 100;
+            position: absolute;
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            height: fit-content;
+        }
+
+        .scroll-button-left {
+            left: 0;
+            top: 6px;
+            display: flex;
+            .arrow-div {
+                background-color: $background;
+                height: 60px;
+                display: flex;
+                align-items: center;
+            }
+            .arrow-shadow {
+                width: 40px;
+                height: 60px;
+                background: linear-gradient(
+                    90deg,
+                    $background 0%,
+                    rgba(248, 249, 252, 0) 100%
+                );
+            }
+        }
+
+        .scroll-button-right {
+            right: 0;
+            top: 6px;
+            display: flex;
+            .arrow-div {
+                background-color: $background;
+                height: 60px;
+                display: flex;
+                align-items: center;
+            }
+            .arrow-shadow {
+                width: 40px;
+                height: 60px;
+                background: linear-gradient(
+                    270deg,
+                    $background 0%,
+                    rgba(248, 249, 252, 0) 100%
+                );
+            }
+        }
+    }
+    .vote-delegation-header {
+        font-family: $--poppins-bold;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 52px;
+        color: #0d112f;
+        padding-bottom: 32px;
+        @media only screen and (max-width: $--breakpoints-md) {
+            padding: 32px 0 24px 0;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 32px;
+        }
+    }
+}
+.delegation-chart {
+    width: 598px;
+    height: 291px;
+    box-shadow: 0px 1px 42px rgba(52, 93, 200, 0.06),
+        0px 1px 3px rgba(87, 119, 168, 0.1);
+    .delegates-info {
+        .delegates-info-text {
+            font-family: $--worksans-regular;
+            color: #a0abc0;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            margin: 0;
+        }
+
+        .delegates-info-span {
+            font-family: $--worksans-regular;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 32px;
+            color: #0d112f;
+        }
+    }
+
+    .btn-delegation {
+        margin: 22px 0 32px 0;
+        min-width: 100%;
+
+        .drep-button {
+            @media only screen and (min-width: $--breakpoints-md) {
+                padding: 13px 16px;
+                h5 {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+            @media only screen and (max-width: $--breakpoints-md) {
+                width: 100%;
+                padding: 13px 16px;
+                max-height: 54px;
+                h5 {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+.delegation-wrapper-middle {
+    margin-top: 38px;
+    margin-bottom: 28px;
+
+    p {
+        font-family: $--worksans-semibold;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        color: #212121;
+        letter-spacing: -0.015em;
+        padding-right: 4px;
+    }
+    .dreps-span-text {
+        font-family: $--worksans-regular;
+        color: #878e9e;
+        letter-spacing: -0.015em;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .trash-icon-label {
+        font-family: $--worksans-semibold;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: $body;
+        padding-left: 7px;
+    }
+}
+
+.avatar-list-name {
+    font-family: $--worksans-semibold;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: $headings;
+    letter-spacing: -0.015em;
+    margin-left: 16px;
+}
+
+.drep-voting-stats {
+    border-radius: 8px;
+    background-color: $ghost;
+    padding: 16px 0;
+    margin: 16px 0;
+
+    p {
+        font-family: $--worksans-regular;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $body;
+        span {
+            font-family: $--worksans-medium;
+            font-weight: 500;
+            color: $headings;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    .list-item {
+        background: $background;
+        border: 1px solid #f9f9f9;
+        border-radius: 0px 16px 16px 0px;
+    }
+
+    .trash-can {
+        padding: 10px;
+        background-color: $ghost;
+    }
+    .procent-value {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ffffff;
+        box-shadow: 0px 1px 2px rgba(49, 73, 135, 0.06),
+            0px 1px 3px rgba(52, 93, 200, 0.1);
+        border-radius: 8px;
+        p {
+            font-family: $--worksans-regular;
+            font-weight: 400;
+            font-size: 16px;
+            padding: 16px 0 !important;
+            line-height: 28px;
+            color: $headings;
+        }
+    }
+
+    .voting-power-text {
+        padding: 0 !important;
+        text-align: left !important;
+    }
+}
+
+.danger-text {
+    color: $redLight-500;
+}

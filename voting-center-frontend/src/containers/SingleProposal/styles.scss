@@ -1,0 +1,114 @@
+@import '../../assets//styles/variables';
+
+.single-proposal-wrapper {
+    background-color: $background;
+
+    .proposal-info {
+        .back-button-wrapper {
+            gap: 10px;
+            cursor: pointer;
+
+            .back-button-text {
+                color: black;
+                font-family: $--poppins-semibold;
+                font-weight: 600;
+                line-height: 34px;
+                font-size: 24px;
+            }
+        }
+
+        .proposal-title-wrapper {
+            .proposal-title {
+                color: $primary;
+                font-family: $--poppins-bold;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 34px;
+                grid-gap: 10px;
+            }
+        }
+
+        .proposal-first-info {
+            margin-bottom: 12px;
+
+            .info-name {
+                font-family: $--worksans-semibold;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 24px;
+                color: $headings;
+                text-align: left;
+
+                :not(:last-child) {
+                    margin-bottom: 3px;
+                }
+            }
+
+            .info-value {
+                font-family: $--worksans-regular;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                color: $body;
+                text-align: left;
+
+                :not(:last-child) {
+                    margin-bottom: 3px;
+                }
+            }
+        }
+
+        .proposal-second-info {
+            row-gap: 12px;
+
+            .second-info-title {
+                font-family: $--worksans-semibold;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 28px;
+                color: $headings;
+            }
+
+            .second-info-text {
+                font-family: $--worksans-regular;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                color: $body;
+            }
+
+            .proposal-team {
+                .team-name {
+                    font-family: $--worksans-semibold;
+                    font-size: 14px;
+                    line-height: 20px;
+                    font-weight: 600;
+                    color: $body;
+                }
+                .team-avatar {
+                    width: 64px;
+                    height: 64px;
+                }
+            }
+        }
+
+        .proposer-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: fit-content;
+
+            img {
+                width: 64px;
+                height: 64px;
+            }
+
+            .proposer-name {
+                font-family: $--worksans-regular;
+                color: $body;
+                font-weight: 600;
+                font-size: 14px;
+            }
+        }
+    }
+}

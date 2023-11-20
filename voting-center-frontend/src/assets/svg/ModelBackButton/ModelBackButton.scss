@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+svg.modal-back-button-container {
+    &:hover {
+        cursor: pointer;
+    }
+    circle {
+        &:hover {
+            fill: $ghost;
+        }
+    }
+}

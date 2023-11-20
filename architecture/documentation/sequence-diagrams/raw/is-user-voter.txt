@@ -1,0 +1,15 @@
+title Is user a voter (Passive or Active)?
+
+participant GVC Frontend
+participant GVC Backend
+
+GVC Frontend->GVC Backend: **GET /api/voters**
+GVC Backend->GVC Frontend: All voter entries (**[voterEntry]**)
+
+note over GVC Frontend: IF **PublicKey** IN **[voterEntry].voting_key** user is a registered Voter
+
+note over GVC Frontend: ELSE **PublicKey** NOT IN **[voterEntry].voting_key** user is not Voter
+
+note over GVC Frontend: IF user is voter AND **is_passive == True** user is Passive Voter
+
+note over GVC Frontend: IF user is voter AND **is_passive == False** user is Active Voter

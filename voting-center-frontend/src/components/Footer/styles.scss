@@ -1,0 +1,40 @@
+@import '../../assets/styles/variables';
+
+.footer{
+    padding: 38px 0;
+    border-top: 1px solid $ghost;
+
+    .logo-link{
+        max-width: max-content;
+    }
+
+    .logo{
+        width: 140px;
+    }
+
+    p{
+        color: $catalystLogoColor;
+        font-family: $--worksans-regular;
+        margin-bottom: 6px;
+    }
+
+    .support-mail{
+        text-decoration: underline;    
+    }
+
+    .start-tour-guide{
+        cursor: pointer;
+        text-decoration: underline;   
+    }
+
+    .social-wrapper{
+        background-color: $catalystLogoColor;
+        border-radius: 50%;
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+    }
+}

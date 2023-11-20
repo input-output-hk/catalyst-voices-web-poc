@@ -1,0 +1,10 @@
+version: "3.6"
+
+services:
+  gvc-structurizr:
+    container_name: gvc-architecture 
+    image: structurizr/lite:latest
+    ports:
+      - '8000:8080'
+    volumes:
+      - .:/usr/local/structurizr:rw

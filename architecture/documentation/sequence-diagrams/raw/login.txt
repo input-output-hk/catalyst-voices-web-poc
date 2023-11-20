@@ -1,0 +1,13 @@
+title Wallet Login/Connection
+
+participant User
+participant GVC Frontend
+participant Wallet
+
+User->GVC Frontend: 'Connect Wallet' Button pressed
+GVC Frontend->User: Wallet Selection prompt
+User->GVC Frontend: Wallet Selected **walletName**
+GVC Frontend->Wallet: **cardano.{walletName}.governance.enable([0])
+Wallet->User: Ask permission popup (Wallet UI)
+User->Wallet: Access granted (Wallet UI)
+Wallet->GVC Frontend: **cip62API** API object

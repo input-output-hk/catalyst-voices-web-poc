@@ -1,0 +1,36 @@
+@import '../../../assets/styles/variables';
+
+.button-notice {
+    &.message {
+        font-family: $--worksans-regular;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: $body;
+        padding: 32px;
+        border-radius: 8px;
+        background-color: $ghost;
+        gap: 24px;
+
+        .notice-content {
+            .content-text {
+                span.notice-message-text {
+                    width: 100%;
+                    word-wrap: break-word;
+                    margin-right: 24px;
+                }
+            }
+            .content-button {
+                .card-button-container.btn.btn-primary {
+                    min-width: 100%;
+                    padding: 12px 16px;
+
+                    p.card-button-text {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

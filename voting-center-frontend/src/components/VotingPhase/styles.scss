@@ -1,0 +1,64 @@
+@import '../../assets/styles/variables';
+
+.voting-phase-heading {
+    font-family: $--poppins-bold;
+    font-weight: 700;
+    font-size: 24px;
+
+    @media only screen and (max-width: $--breakpoints-md) {
+        margin-top: 32px;
+    }
+}
+
+.voting-phase-wrapper{
+&::-webkit-scrollbar {
+        width: 16px;
+        @media only screen and (max-width: $--breakpoints-md) {
+            width: 0;
+        }
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: transparent
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: rgba(26, 26, 26, 0.1);
+        border-radius: 100px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgba(26, 26, 26, 0.2);
+    }
+}
+
+.voting-phase-card-heading {
+    font-family: $--worksans-regular;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $body;
+    margin-bottom: 0;
+}
+
+.voting-phase-card-subheading {
+    font-family: $--worksans-semibold;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 4px 0 0 0;
+}
+.voting-phase-card-text {
+    font-size: 16px !important;
+    width: 250px;
+    padding-bottom: 73px;
+    width: 100%;
+    white-space: pre-line;
+}
+
+.past-phase {
+    filter: grayscale(1);
+}

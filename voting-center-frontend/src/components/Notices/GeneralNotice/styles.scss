@@ -1,0 +1,27 @@
+@import '../../../assets/styles/variables';
+
+.general-notice {
+    &.message {
+        font-family: $--worksans-semibold;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        color: $headings;
+        padding: 17px 24px;
+        border-radius: 12px;
+        margin-bottom: 32px;
+        background-color: $ghost;
+        @media only screen and (max-width: $--breakpoints-md) {
+            padding: 24px 5px;
+        }
+    }
+
+    .message-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            padding-right: 16px;
+        }
+    }
+}

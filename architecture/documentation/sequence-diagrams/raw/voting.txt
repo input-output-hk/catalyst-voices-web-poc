@@ -1,0 +1,33 @@
+title Voting 
+
+participant User
+participant GVC Frontend
+participant Wallet
+participant Jormungandr Node
+
+User->GVC Frontend: Selects proposal + choice
+GVC Frontend->GVC Frontend: Build CIP-62 **Proposal** Object
+
+note over GVC Frontend: Get current Jorm blockdate
+GVC Frontend->Jormungandr Node: **GET /api/v0/node/stats
+GVC Frontend->GVC Frontend: Build **BlockDate** Object
+
+note over GVC Frontend: Get Voter's spending counter (aka Vote counter)
+GVC Frontend->Jormungandr Node: **GET /api/v0/account/{PublicKey}
+GVC Frontend->GVC Frontend: Build **Vote** Object
+
+GVC Frontend->Wallet: **cip62API.signVotes(Vote, Settings)
+Wallet->Wallet: Build vote fragment
+Wallet->User: Sign vote fragment prompt (Wallet UI)
+User->Wallet: Grants signing of vote fragment (Wallet UI)
+Wallet->GVC Frontend: Signed vote fragment
+GVC Frontend->Jormungandr Node: **POST /api/v1/fragments**
+Jormungandr Node->GVC Frontend: **Response**
+
+note over GVC Frontend: IF **Response** == 200 AND **Response**.accepted == NOT NULL
+
+GVC Frontend->User: Vote submission confirmation UI
+
+note over GVC Frontend: ELSE
+
+GVC Frontend->User:  Vote submission error UI

@@ -1,0 +1,59 @@
+@import '../../assets/styles/variables';
+
+.radio-button {
+    &.form-check {
+        max-width: fit-content;
+        font-family: $--worksans-medium;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: $baseLight;
+    }
+
+    .form-check-input {
+        &[type='radio'] {
+            width: 24px;
+            height: 24px;
+            margin-top: 0;
+            margin-right: 12px;
+            background-color: $baseLight-50;
+            border-color: $baseLight-200;
+            @include shadow-sm();
+
+            &:checked {
+                background-color: $blueLight-600;
+                border-color: $blueLight-600;
+            }
+
+            &:disabled,
+            &[disabled] {
+                background-image: none;
+                background-color: $baseLight-100;
+                opacity: 1;
+                box-shadow: none;
+                border: 1px $baseLight-100;
+            }
+        }
+    }
+
+    &.form-check-reverse {
+        .form-check-input[type='radio'] {
+            margin-right: 0;
+            margin-left: 12px;
+        }
+    }
+
+    &.form-check-sm {
+        font-size: 14px;
+        line-height: 20px;
+        .form-check-input[type='radio'] {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .form-check-input[type='radio'][disabled] ~ .form-check-label,
+    .form-check-input[type='radio']:disabled ~ .form-check-label {
+        color: $baseLight-400;
+    }
+}

@@ -1,0 +1,45 @@
+@import '../../assets/styles/variables';
+
+.drep-item {
+    background: $background;
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    transition: background 200ms;
+
+    .drep-text-info {
+        margin-left: 16px;
+        .drep-name {
+            font-family: $--worksans-regular;
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 600;
+        }
+        .drep-description {
+            font-family: $--worksans-regular;
+            font-size: 16px;
+            line-height: 24px;
+            color: $body;
+        }
+    }
+
+    .tag-component {
+        margin-left: 16px;
+        padding: 4px 12px;
+        height: fit-content;
+        @media only screen and (max-width: $--breakpoints-md) {
+            margin-left: 0;
+            margin-right: 16px;
+        }
+    }
+
+    .deselect-tag {
+        margin-top: 16px;
+        background: $primary;
+        color: $white;
+    }
+
+    &:hover {
+        background: $ghost;
+    }
+}

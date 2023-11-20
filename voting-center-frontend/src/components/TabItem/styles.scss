@@ -1,0 +1,36 @@
+@import '../../assets/styles/variables';
+
+ul.nav.nav-tabs,
+.nav-item {
+    font-family: $--worksans-medium;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    button {
+        color: rgba(26, 26, 26, 0.7);
+    }
+    .active {
+        background-color: $blueLight-600;
+        color: $white;
+    }
+}
+
+.tab-content > .active {
+    padding-left: 24px;
+}
+
+.tab-heading {
+    font-family: $--poppins-bold;
+    color: $baseLight;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 34px;
+}
+
+.tab-text {
+    font-family: $--worksans-regular;
+    color: rgba(26, 26, 26, 0.7);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+}

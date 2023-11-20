@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "challenges_images",
+  "info": {
+    "singularName": "challenges-image",
+    "pluralName": "challenges-images",
+    "displayName": "Challenges image",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "challenge_id": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "challenge_img": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import '../../assets/styles/variables';
+
+.challenge-card {
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+
+    .challenge-url{
+        transition: 100ms;
+        &:hover{
+            path {
+                stroke: $primary;
+            }
+        }
+    }
+
+    p {
+        margin-bottom: unset;
+    }
+
+    .card-img-top {
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+    }
+
+    .card-body {
+        padding: 27px 20px;
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            font-family: $--worksans-semibold;
+            line-height: 24px;
+        }
+
+        .challenge-card-content {
+            .card-text {
+                color: $body;
+                font-family: $--worksans-regular;
+                font-weight: 400;
+                line-height: 16px;
+                font-size: 12px;
+                text-align: left;
+            }
+
+            .card-proposals {
+                font-family: $--worksans-medium;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                color: $body;
+                text-align: left;
+            }
+
+            .card-budget {
+                font-family: $--worksans-semibold;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 20px;
+                color: $headings;
+            }
+        }
+    }
+}

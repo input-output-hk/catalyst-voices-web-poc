@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "terms_and_conditions",
+  "info": {
+    "singularName": "terms-and-condition",
+    "pluralName": "terms-and-conditions",
+    "displayName": "Terms and conditions",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "terms_and_conditions": {
+      "type": "text",
+      "required": true,
+      "unique": true,
+      "minLength": 10
+    }
+  }
+}

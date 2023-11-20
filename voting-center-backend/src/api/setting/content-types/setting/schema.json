@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "settings",
+  "info": {
+    "singularName": "setting",
+    "pluralName": "settings",
+    "displayName": "Settings",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dRep_registration_open": {
+      "type": "boolean",
+      "default": true
+    },
+    "is_voting_enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "is_delegation_enabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "is_drep_approval_automated": {
+      "type": "boolean",
+      "default": false
+    },
+    "event_id": {
+      "type": "integer",
+      "required": false
+    }
+  }
+}

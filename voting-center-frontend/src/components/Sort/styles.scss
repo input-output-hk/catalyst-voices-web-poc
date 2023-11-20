@@ -1,0 +1,67 @@
+@import '../../assets/styles/variables';
+
+.sort-dropdown {
+    .sort-button {
+        background-color: $white;
+        border-radius: 8px;
+        padding: 0.375em 1em;
+        filter: none;
+
+        @include box-shadow-shadow-sm();
+
+        &:is(:active, :focus) {
+            @include box-shadow-shadow-sm();
+        }
+        p {
+            color: $body;
+            font-size: 0.875em;
+            line-height: 1.25em;
+            font-family: $--worksans-semibold;
+        }
+    }
+
+    p {
+        color: $body;
+        font-size: 1em;
+        line-height: 1.5em;
+        font-family: $--worksans-medium;
+        font-weight: 500;
+    }
+
+    .dropdown-toggle {
+        color: $body;
+
+        &::after {
+            margin-left: 0.875em;
+        }
+    }
+    .btn-primary {
+        border: none;
+    }
+    .btn-primary:hover {
+        background-color: $white !important;
+    }
+
+    .sort-menu-wrapper {
+        .dropdown-menu {
+            max-width: 100%;
+            padding: 1em;
+            @include box-shadow-shadow-xl();
+        }
+    }
+
+    .dropdown-item {
+        padding: 10px 16px;
+        &:active {
+            background-color: transparent;
+        }
+
+        &:is(:hover, :focus) {
+            p {
+                color: $headings;
+            }
+            background-color: $background;
+            border-radius: 8px;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@import '../../../assets/styles/variables';
+
+label.combobox-input-label.form-label {
+    font-family: $--worksans-medium;
+    color: $body;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.input-group.combobox-input-group {
+    // border: 1px solid transparent;
+    background: $white;
+    border-radius: 8px;
+    @include box-shadow-shadow-sm();
+
+    &:hover {
+        background: $white;
+        border-radius: 8px;
+
+        box-shadow: 1px 0 0 $baseLight-500, -1px 0 0 $baseLight-500,
+            0 1px 0 $baseLight-500, 0 -1px 0 $baseLight-500;
+    }
+
+    .input-group-text.combobox-input-icon {
+        color: $feint;
+        background-color: $baseLight-50;
+        border: 1px solid transparent;
+        border-radius: 8px;
+    }
+
+    input.combobox-input-text {
+        box-shadow: none;
+        border: 1px solid transparent;
+        caret-color: $action;
+
+        .form-control {
+            font-family: $--worksans-regular;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            background: $white;
+            @include box-shadow-shadow-sm();
+            border-radius: 8px;
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 200ms;
+            color: $headings;
+            &::placeholder {
+                font-family: $--worksans-regular;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 28px;
+                color: $body;
+            }
+        }
+    }
+}

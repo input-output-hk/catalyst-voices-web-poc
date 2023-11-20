@@ -1,0 +1,15 @@
+title dRep Registration
+
+participant User
+participant GVC Frontend
+participant GVC Backend
+
+User->GVC Frontend: 'Register as a dRep' button pressed
+GVC Frontend->User: dRep Registration page
+User->GVC Frontend: Provide information
+
+GVC Frontend->GVC Frontend: Build dRep entry (using vote **PublicKey**)
+
+GVC Frontend->GVC Backend: **POST api/dreps**
+
+GVC Frontend->User: 'We are Reviewing Your Application' page.

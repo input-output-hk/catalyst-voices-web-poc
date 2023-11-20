@@ -1,0 +1,10 @@
+@import '../../assets/styles/variables';
+
+.homepage {
+    .card-item-single {
+        padding-top: 83px;
+        @media only screen and (max-width: $--breakpoints-md) {
+            padding-top: 0;
+        }
+    }
+}

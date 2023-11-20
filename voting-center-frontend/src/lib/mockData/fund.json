@@ -1,0 +1,269 @@
+{
+    "id": 9,
+    "fund_name": "Fund 9",
+    "fund_goal": "Create, fund and deliver the future of Cardano.",
+    "voting_power_threshold": 500000000,
+    "fund_start_time": "2022-10-10T10:00:00Z",
+    "fund_end_time": "2022-10-24T16:00:00Z",
+    "next_fund_start_time": "2023-01-12T11:00:00Z",
+    "registration_snapshot_time": "2022-12-04T11:00:00Z",
+    "next_registration_snapshot_time": "2023-01-05T11:00:00Z",
+    "chain_vote_plans": [
+        {
+            "id": -2006976974,
+            "chain_voteplan_id": "2b2c5a135e1528ecb2a76b196f1b241f9153171b802bbf085b13e519293b8277",
+            "chain_vote_start_time": "2022-09-05T10:00:00Z",
+            "chain_vote_end_time": "2022-09-19T16:00:00Z",
+            "chain_committee_end_time": "2022-10-04T00:00:00Z",
+            "chain_voteplan_payload": "private",
+            "chain_vote_encryption_key": "ristretto255_votepk1yzvwlnk80yqs2kmve5uj3p0c52cpghmep940vad5zlnluzpxfqeqfj7fg4",
+            "fund_id": 9
+        },
+        {
+            "id": -1897626857,
+            "chain_voteplan_id": "3ccd01b5be55c3c8cb2daead9ad183fe72d7788cb486c01e6d8c8d7793096809",
+            "chain_vote_start_time": "2022-09-05T10:00:00Z",
+            "chain_vote_end_time": "2022-09-19T16:00:00Z",
+            "chain_committee_end_time": "2022-10-04T00:00:00Z",
+            "chain_voteplan_payload": "private",
+            "chain_vote_encryption_key": "ristretto255_votepk1mt5r92aavq7dfv87cez5jlw77nzn6r8q6g09cf580fuzpz8fve7shgz876",
+            "fund_id": 9
+        },
+        {
+            "id": -1548959934,
+            "chain_voteplan_id": "0b3de82c354b9c9e7e28837f1efa48b00122c630396d77556f511394f03aafe5",
+            "chain_vote_start_time": "2022-09-05T10:00:00Z",
+            "chain_vote_end_time": "2022-09-19T16:00:00Z",
+            "chain_committee_end_time": "2022-10-04T00:00:00Z",
+            "chain_voteplan_payload": "private",
+            "chain_vote_encryption_key": "ristretto255_votepk1aptmnegum7dsveqd3umt944tx95tvnklcz8l0mcjfgxuan9yqgjqsz8rca",
+            "fund_id": 9
+        },
+        {
+            "id": 1598786789,
+            "chain_voteplan_id": "9a278b6f788278e5cd8dfd6de8b8b8699a7f6b4847c680843de6c02d5b3169b2",
+            "chain_vote_start_time": "2022-09-05T10:00:00Z",
+            "chain_vote_end_time": "2022-09-19T16:00:00Z",
+            "chain_committee_end_time": "2022-10-04T00:00:00Z",
+            "chain_voteplan_payload": "private",
+            "chain_vote_encryption_key": "ristretto255_votepk1mrt3dr5vher3jhs7enepaxl65ggsqeu23amm55nxup9h8nqmuqeqq9m4j2",
+            "fund_id": 9
+        },
+        {
+            "id": 1658769165,
+            "chain_voteplan_id": "4f732ec23e336886ac1eb47f052e6c5b48866004ade4c06c5ad25505635ef343",
+            "chain_vote_start_time": "2022-09-05T10:00:00Z",
+            "chain_vote_end_time": "2022-09-19T16:00:00Z",
+            "chain_committee_end_time": "2022-10-04T00:00:00Z",
+            "chain_voteplan_payload": "private",
+            "chain_vote_encryption_key": "ristretto255_votepk1w32a657pc6gkxyelqh7u9z2rfxh7t8c7wsz2xtwpts70cn2etvyqj40kwl",
+            "fund_id": 9
+        }
+    ],
+    "challenges": [
+        {
+            "internal_id": 1,
+            "id": 1,
+            "challenge_type": "simple",
+            "title": "The Great Migration (from Ethereum)",
+            "description": "How might we make it easy and fast for dApps and other projects to expand or completely move from Ethereum to Cardano?",
+            "rewards_total": 500000,
+            "proposers_rewards": 500000,
+            "fund_id": 9,
+            "challenge_url": "https://cardano.ideascale.com/c/campaigns/26593/",
+            "highlights": null
+        },
+        {
+            "internal_id": 2,
+            "id": 2,
+            "challenge_type": "simple",
+            "title": "DAOs <3 Cardano",
+            "description": "How can we make Cardano the go-to choice for building DAOs? What tools can we provide to enable effective DAO's Creation & Operation",
+            "rewards_total": 1000000,
+            "proposers_rewards": 1000000,
+            "fund_id": 9,
+            "challenge_url": "https://cardano.ideascale.com/c/campaigns/26594/",
+            "highlights": null
+        },
+        {
+            "internal_id": 3,
+            "id": 3,
+            "challenge_type": "simple",
+            "title": "Dapps, Products & Integrations",
+            "description": "What dapps, products and integrations can be implemented to bring impactful use cases to Cardano ecosystem that help drive more adoption?",
+            "rewards_total": 7850000,
+            "proposers_rewards": 7850000,
+            "fund_id": 9,
+            "challenge_url": "https://cardano.ideascale.com/c/campaigns/26595/",
+            "highlights": null
+        },
+        {
+            "internal_id": 4,
+            "id": 4,
+            "challenge_type": "simple",
+            "title": "Legal & Financial Implementations",
+            "description": "How can we build effective solutions to explore and provide legal & financial services and support to funded Proposers.",
+            "rewards_total": 500000,
+            "proposers_rewards": 500000,
+            "fund_id": 9,
+            "challenge_url": "https://cardano.ideascale.com/c/campaigns/26596/",
+            "highlights": null
+        },
+        {
+            "internal_id": 5,
+            "id": 5,
+            "challenge_type": "simple",
+            "title": "Developer Ecosystem",
+            "description": "How can we create a positive developer experience that helps the developer focus on building successful apps?",
+            "rewards_total": 1000000,
+            "proposers_rewards": 1000000,
+            "fund_id": 9,
+            "challenge_url": "https://cardano.ideascale.com/c/campaigns/26597/",
+            "highlights": null
+        },
+        {
+            "internal_id": 6,
+            "id": 6,
+            "challenge_type": "simple",
+            "title": "Cross-Chain Collaboration",
+            "description": "In the next 6-12 months, how might we create new connections between blockchain communities and how do we enhance existing collaboration?",
+            "rewards_total": 900000,
+            "proposers_rewards": 900000,
+            "fund_id": 9,
+            "challenge_url": "https://cardano.ideascale.com/c/campaigns/26598/",
+            "highlights": null
+        },
+        {
+            "internal_id": 7,
+            "id": 7,
+            "challenge_type": "simple",
+            "title": "Challenge & Scouted for Students🎓",
+            "description": "How can we provide Student Entrepreneurs with a place to appeal their ideas to the world and an opportunity to connect with Engineers?",
+            "rewards_total": 100000,
+            "proposers_rewards": 100000,
+            "fund_id": 9,
+            "challenge_url": "https://cardano.ideascale.com/c/campaigns/26599/",
+            "highlights": null
+        },
+        {
+            "internal_id": 8,
+            "id": 8,
+            "challenge_type": "simple",
+            "title": "Grow Africa, Grow Cardano",
+            "description": "How do we prepare Africa for a future of wide-scale Cardano adoption? How do we continue to seed and grow adoption in 2022 and beyond?",
+            "rewards_total": 500000,
+            "proposers_rewards": 500000,
+            "fund_id": 9,
+            "challenge_url": "https://cardano.ideascale.com/c/campaigns/26600/",
+            "highlights": null
+        },
+        {
+            "internal_id": 9,
+            "id": 9,
+            "challenge_type": "simple",
+            "title": "dRep improvement and onboarding",
+            "description": "How do you achieve \"(1) diverse and many dRep participation + (2) easy and proper voter delegation?\"",
+            "rewards_total": 150000,
+            "proposers_rewards": 150000,
+            "fund_id": 9,
+            "challenge_url": "https://cardano.ideascale.com/c/campaigns/26601/",
+            "highlights": null
+        },
+        {
+            "internal_id": 10,
+            "id": 10,
+            "challenge_type": "simple",
+            "title": "Grow East Asia, Grow Cardano",
+            "description": "How do we grow the Cardano ecosystem in East Asia in an inclusive and supportive way? The same way we do in Africa, focused initiatives!",
+            "rewards_total": 250000,
+            "proposers_rewards": 250000,
+            "fund_id": 9,
+            "challenge_url": "https://cardano.ideascale.com/c/campaigns/26602/",
+            "highlights": null
+        },
+        {
+            "internal_id": 11,
+            "id": 11,
+            "challenge_type": "simple",
+            "title": "Building (on) Blockfrost",
+            "description": "How can we expand the Blockfrost ecosystem to drive the developer adoption on Cardano?",
+            "rewards_total": 50000,
+            "proposers_rewards": 50000,
+            "fund_id": 9,
+            "challenge_url": "https://cardano.ideascale.com/c/campaigns/26603/",
+            "highlights": null
+        },
+        {
+            "internal_id": 12,
+            "id": 12,
+            "challenge_type": "native",
+            "title": "Catalyst Natives X Cardashift: Demonstrating and monetizing impact",
+            "description": "How could the Cardano technology be leveraged to build new solutions for positive impact valuation and monetization?",
+            "rewards_total": 200000,
+            "proposers_rewards": 200000,
+            "fund_id": 9,
+            "challenge_url": "https://cardano.ideascale.com/c/campaigns/26605/",
+            "highlights": null
+        },
+        {
+            "internal_id": 13,
+            "id": 13,
+            "challenge_type": "community-choice",
+            "title": "Fund10 challenge setting",
+            "description": "What Challenges should the community prioritize to address in Fund10?",
+            "rewards_total": 12800000,
+            "proposers_rewards": 12800000,
+            "fund_id": 9,
+            "challenge_url": "https://cardano.ideascale.com/c/campaigns/26604/",
+            "highlights": null
+        }
+    ],
+    "insight_sharing_start": "2022-06-02T00:00:00Z",
+    "proposal_submission_start": "2022-06-09T00:00:00Z",
+    "refine_proposals_start": "2022-06-16T00:00:00Z",
+    "finalize_proposals_start": "2022-06-23T00:00:00Z",
+    "proposal_assessment_start": "2022-06-30T00:00:00Z",
+    "assessment_qa_start": "2022-07-14T00:00:00Z",
+    "snapshot_start": "2022-08-04T11:00:00Z",
+    "voting_start": "2022-09-05T10:00:00Z",
+    "voting_end": "2022-09-19T16:00:00Z",
+    "tallying_end": "2022-10-04T00:00:00Z",
+    "goals": [
+        {
+            "id": 1,
+            "goal_name": "Prepare a group of people willing and able to contribute to the ecosystem",
+            "fund_id": 9
+        },
+        {
+            "id": 2,
+            "goal_name": "Turn Cardano into an open-source project & attract more developers",
+            "fund_id": 9
+        },
+        {
+            "id": 3,
+            "goal_name": "Build real-world solutions based on the Cardano blockchain.",
+            "fund_id": 9
+        },
+        {
+            "id": 4,
+            "goal_name": "Improve tooling to support human processes in Catalyst",
+            "fund_id": 9
+        }
+    ],
+    "results_url": "https://fund9-servicing-station.gov.iog.io/results",
+    "survey_url": "https://fund9-servicing-station.gov.iog.io/survey",
+    "next": {
+        "id": 10,
+        "fund_name": "Fund10",
+        "insight_sharing_start": "2022-10-27T00:00:00Z",
+        "proposal_submission_start": "2022-11-03T00:00:00Z",
+        "refine_proposals_start": "2023-11-10T00:00:00Z",
+        "finalize_proposals_start": "2023-11-17T00:00:00Z",
+        "proposal_assessment_start": "2023-11-24T12:00:00Z",
+        "assessment_qa_start": "2023-12-08T12:00:00Z",
+        "snapshot_start": "2023-01-05T11:00:00Z",
+        "voting_start": "2023-01-12T11:00:00Z",
+        "voting_end": "2023-01-26T12:00:00Z",
+        "tallying_end": "2023-01-28T11:00:00Z"
+    }
+}

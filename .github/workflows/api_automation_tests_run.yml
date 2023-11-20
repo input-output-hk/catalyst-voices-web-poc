@@ -1,0 +1,123 @@
+name: Voting Center backend CI tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    paths:
+      - 'voting-center-automation/**'
+      - 'voting-center-backend/**'
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+env:
+  SENTRY_DSN: ${{ secrets.CI_SENTRY_DSN }}
+  BLOCKFROST_KEY: ${{ secrets.CI_BLOCKFROST_KEY }}
+  HOST: localhost
+  PORT: 1337
+  DATABASE_HOST: postgres
+  DATABASE_PORT: 5432
+  DATABASE_NAME: gvcDB
+  DATABASE_USERNAME: postgres
+  DATABASE_PASSWORD: postgres
+  APP_KEYS: oHALYxehalk5k02qBZcTbg==,iGa6t2cysUfm+X3F+fdgNQ==,DBF+oC+F3NzIOWEYNG81iA==,NzoFHf+LKaodqYjEpUs0Fw==
+  API_TOKEN_SALT: Mda37Yk/R5CqywOygvaZ4Q==
+  ADMIN_JWT_SECRET: kEdxKbjGcR0fqzRKQop0gA==
+  JWT_SECRET: zniSMBNuX91kZznZZm9s4g==
+  NODE_ENV: development
+  ENV: dev
+  BLOCKFROST_URL: https://cardano-preprod.blockfrost.io/api/
+
+jobs:
+  automation_tests:
+    runs-on: ubuntu-latest
+    
+    container: node:latest
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: ${{ env.DATABASE_PASSWORD}}
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install PostgreSQL client
+        run: |
+          apt-get update
+          apt-get install --yes postgresql-client
+
+      - name: Install Node utils
+        run: apt install -y libvips-dev
+
+      #TODO: remove gvcDB constant and use it from .env file
+      - name: Create gvcDB database
+        run: psql -h ${{ env.DATABASE_HOST}} -d postgres -U ${{ env.DATABASE_USERNAME}} -c 'CREATE DATABASE "${{ env.DATABASE_NAME}}";'
+        env: 
+          PGPASSWORD: ${{ env.DATABASE_PASSWORD}}
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}      
+
+      - name: Install backend and strapi-plugin
+        run: |
+          cd voting-center-backend
+          npm install strapi-plugin-config-sync
+          npm install 
+          npm run build     
+    
+      - name: Prepare Backend database
+        run: |
+          cd voting-center-automation
+          npm install
+          npm run prepare-backend-db
+      
+      - name: Run E2E Tests
+        run: |
+            cd voting-center-backend
+            npm run develop &
+            sleep 60 &&
+            curl -sSf http://${{ env.HOST }}:${{ env.PORT }} > /dev/null &&
+            cd ../voting-center-automation &&
+            npm run api-test
+            
+      - name: Get allure history
+        uses: actions/checkout@v2
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+      
+      - name: Generate allure report
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        id: allure-report
+        with:
+          allure_results: ./voting-center-automation/allure-results/
+          gh_pages: gh-pages
+          allure_report: allure-report
+          allure_history: allure-history
+          keep_reports: 20
+
+      - name: Deploy allure report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history

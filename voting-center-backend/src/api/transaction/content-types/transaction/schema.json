@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "singularName": "transaction",
+    "pluralName": "transactions",
+    "displayName": "Transactions",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "transaction_hash": {
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    },
+    "transaction_metadata": {
+      "type": "json",
+      "required": true
+    },
+    "is_successful": {
+      "type": "boolean"
+    }
+  }
+}

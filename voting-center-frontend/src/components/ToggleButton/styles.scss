@@ -1,0 +1,129 @@
+@import '../../assets/styles/variables';
+
+.form-switch {
+    max-width: fit-content;
+    font-family: $--worksans-medium;
+    font-size: 16px;
+    line-height: 24px;
+    color: $body;
+
+    &.form-check-reverse {
+        .form-check-input {
+            margin-left: 12px;
+        }
+    }
+
+    .form-check-input {
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 200ms;
+        cursor: pointer;
+        border-radius: 12px;
+        width: 48px;
+        height: 24px;
+        margin-top: unset;
+        margin-right: 12px;
+
+        background-color: $foreground;
+        border: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23FFFF'/%3E%3C/svg%3E");
+
+        &:checked,
+        &:active {
+            background-color: $primary;
+            border: none;
+            filter: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23FFFF'/%3E%3C/svg%3E");
+        }
+
+        &:focus,
+        &:focus-visible {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23FFFF'/%3E%3C/svg%3E");
+            box-shadow: none;
+        }
+
+        &:disabled,
+        &[disabled] {
+            background-color: $baseLight-200;
+            opacity: 1;
+            box-shadow: none;
+            border: none;
+
+            &:active {
+                background-color: $primary;
+            }
+
+            ~ .form-check-label {
+                color: $baseLight-400;
+                opacity: 1;
+                cursor: default;
+            }
+        }
+    }
+
+    // Styling for Small toggle
+
+    &.form-switch-sm {
+        max-width: fit-content;
+        font-family: $--worksans-medium;
+        font-size: 14px;
+        line-height: 20px;
+        color: $body;
+
+        &.form-check-reverse {
+            .form-check-input {
+                margin-left: 12px;
+            }
+        }
+
+        .form-check-input {
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 200ms;
+            cursor: pointer;
+            border-radius: 12px;
+            width: 40px;
+            height: 18px;
+            margin-top: unset;
+            margin-right: 10px;
+
+            background-color: $baseLight-50;
+            border: 0.5px solid $baseLight-100;
+            @include box-shadow-shadow-sm();
+            background-image: url("data:image/svg+xml,%3Csvg width='28' height='22' viewBox='0 0 28 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_dd_170_8754)'%3E%3Crect x='5' y='5' width='18' height='12' rx='6' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_dd_170_8754' x='0' y='0' width='28' height='22' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeMorphology radius='1' operator='erode' in='SourceAlpha' result='effect1_dropShadow_170_8754'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='3'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_170_8754'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeMorphology radius='1' operator='erode' in='SourceAlpha' result='effect2_dropShadow_170_8754'/%3E%3CfeOffset dy='2'/%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/%3E%3CfeBlend mode='normal' in2='effect1_dropShadow_170_8754' result='effect2_dropShadow_170_8754'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect2_dropShadow_170_8754' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
+
+            &:checked,
+            &:active {
+                background-color: $primary;
+                border: 0.5px solid $primary;
+                @include box-shadow-shadow-sm();
+                filter: none;
+                background-image: url("data:image/svg+xml,%3Csvg width='28' height='22' viewBox='0 0 28 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_dd_170_8754)'%3E%3Crect x='5' y='5' width='18' height='12' rx='6' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_dd_170_8754' x='0' y='0' width='28' height='22' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeMorphology radius='1' operator='erode' in='SourceAlpha' result='effect1_dropShadow_170_8754'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='3'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_170_8754'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeMorphology radius='1' operator='erode' in='SourceAlpha' result='effect2_dropShadow_170_8754'/%3E%3CfeOffset dy='2'/%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/%3E%3CfeBlend mode='normal' in2='effect1_dropShadow_170_8754' result='effect2_dropShadow_170_8754'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect2_dropShadow_170_8754' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
+            }
+
+            &:focus,
+            &:focus-visible {
+                background-image: url("data:image/svg+xml,%3Csvg width='28' height='22' viewBox='0 0 28 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_dd_170_8754)'%3E%3Crect x='5' y='5' width='18' height='12' rx='6' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_dd_170_8754' x='0' y='0' width='28' height='22' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeMorphology radius='1' operator='erode' in='SourceAlpha' result='effect1_dropShadow_170_8754'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='3'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_170_8754'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeMorphology radius='1' operator='erode' in='SourceAlpha' result='effect2_dropShadow_170_8754'/%3E%3CfeOffset dy='2'/%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/%3E%3CfeBlend mode='normal' in2='effect1_dropShadow_170_8754' result='effect2_dropShadow_170_8754'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect2_dropShadow_170_8754' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
+                @include box-shadow-shadow-sm();
+            }
+
+            &:disabled,
+            &[disabled] {
+                background-color: $baseLight-200;
+                opacity: 1;
+                box-shadow: none;
+                border: 0.5px solid $baseLight-200;
+
+                &:active {
+                    background-color: $primary;
+                }
+
+                ~ .form-check-label {
+                    color: $baseLight-400;
+                    opacity: 1;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}

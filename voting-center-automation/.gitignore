@@ -1,0 +1,12 @@
+## Ignore Mac OS Stuff
+.DS_Store
+.AppleDouble
+.LSOverride
+
+node_modules
+package-lock.json
+.env
+
+## allure reports
+allure-report/
+allure-results/

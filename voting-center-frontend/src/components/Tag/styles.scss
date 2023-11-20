@@ -1,0 +1,49 @@
+@import '../../assets/styles/variables';
+
+.tag-component {
+    gap: 10px;
+    font-family: $--worksans-semibold;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: $body;
+    background-color: $ghost;
+    border-radius: 100px;
+    height: 44px;
+    max-height: 44px;
+    padding: 12px 24px;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+    border: none;
+
+    &:hover:not(.active) {
+        background-color: $foreground;
+        color: $body;
+    }
+
+    &.btn-primary.active {
+        background-color: $primary;
+        color: $white;
+        border: none;
+        box-shadow: none;
+    }
+
+    &:active,
+    &:focus {
+        border: none;
+        box-shadow: none;
+    }
+
+    &:active:focus {
+        box-shadow: none;
+    }
+
+    &:focus,
+    .focus-visible:focus:not(:focus-visible) {
+        color: $body;
+        background-color: $ghost;
+        border: none;
+        box-shadow: none;
+    }
+}

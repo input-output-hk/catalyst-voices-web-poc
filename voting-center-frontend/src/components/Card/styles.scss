@@ -1,0 +1,55 @@
+@import '../../assets/styles/variables';
+
+.main-card-item {
+    border-radius: 8px;
+    box-shadow: 0px 1px 42px rgba(52, 93, 200, 0.06),
+        0px 1px 3px rgba(87, 119, 168, 0.1);
+
+    .drep-heading {
+        font-family: $--worksans-semibold;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 30px;
+        color: $headings;
+        padding-bottom: 10px;
+        @media only screen and (max-width: $--breakpoints-md) {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    .card-item-content {
+        padding-bottom: 83px;
+        margin: 0;
+        @media only screen and (max-width: $--breakpoints-md) {
+            padding-bottom: 73px;
+        }
+
+        .card-item-text {
+            color: $body;
+            font-family: 'Work Sans Regular';
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+
+            @media only screen and (max-width: $--breakpoints-lg) {
+                font-size: 16px;
+                line-height: 28px;
+            }
+        }
+
+        .card-title {
+            color: $headings;
+            font-family: $--poppins-bold;
+            font-weight: 700;
+            font-size: 53px;
+            line-height: 60px;
+            margin-bottom: 24px;
+            text-align: left;
+
+            @media only screen and (max-width: $--breakpoints-md) {
+                font-size: 30px;
+            }
+        }
+    }
+}

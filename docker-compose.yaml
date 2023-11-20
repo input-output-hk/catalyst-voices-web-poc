@@ -1,0 +1,24 @@
+# path: ./docker-compose.yml
+version: "3"
+services:
+  backend:
+    build: "./voting-center-backend"
+    container_name: "gvc-be"
+    image: strapi:latest
+    restart: unless-stopped
+    environment:
+      DATABASE_HOST: host.docker.internal
+    ports:
+      - 1337:1337
+    command: "strapi develop"
+
+  frontend:
+    build:
+      context: "./voting-center-frontend"
+    ports:
+      - "3000:3000"
+    container_name: gvc-fe
+    stdin_open: true
+    volumes:
+      - ./frontend:/usr/src/app/frontend
+      - /usr/src/app/frontend/node_modules

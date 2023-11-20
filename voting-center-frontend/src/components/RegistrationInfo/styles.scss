@@ -1,0 +1,25 @@
+@import '../../assets/styles/variables';
+
+.drep-wrapper {
+    padding-top: 30vh;
+    padding-bottom: 30vh;
+    .drep-content {
+        .drep-heading {
+            font-family: $--poppins-bold;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 58px;
+            color: $headings;
+            margin-bottom: 32px;
+        }
+
+        .drep-text {
+            font-family: $--worksans-regular;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 32px;
+            color: $body;
+            margin-bottom: 32px;
+        }
+    }
+}

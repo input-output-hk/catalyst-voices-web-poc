@@ -1,0 +1,10 @@
+title Show Proposals
+
+participant User
+participant GVC Frontend
+participant VIT-SS
+
+User->GVC Frontend: Navigate to proposal view
+GVC Frontend->VIT-SS: **GET api/v0/proposals/{voter_group}
+VIT-SS->GVC Frontend: Proposals
+GVC Frontend->User: Proposal UI

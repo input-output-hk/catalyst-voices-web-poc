@@ -1,0 +1,87 @@
+@import '../../assets/styles/variables';
+
+.profile-content-wrapper {
+    gap: 32px;
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+
+    .profile-info-wrapper {
+        background-color: $background;
+        border-radius: 12px;
+        padding: 16px;
+
+        p.info-heading {
+            font-family: $--worksans-regular;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            color: $body;
+            text-align: left;
+            padding-bottom: unset;
+        }
+        p.info-text {
+            font-family: $--worksans-bold;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 32px;
+            color: $headings;
+            text-align: left;
+            padding-bottom: unset;
+        }
+    }
+
+    .profile-content-profile-card {
+        box-shadow: unset;
+        max-width: unset;
+
+        .modal-content {
+            padding: unset;
+
+            .modal-body {
+                gap: unset;
+
+                .content-row .content-col .profile-card-description {
+                    overflow: unset;
+                    text-overflow: unset;
+                    white-space: unset;
+                }
+            }
+        }
+
+        &.modal-dialog {
+            padding: unset;
+            margin: unset;
+        }
+    }
+
+    .info-wrapper {
+        .info-content {
+            p.info-heading {
+                font-family: $--worksans-semibold;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 32px;
+                color: $headings;
+                text-align: left;
+                padding-bottom: unset;
+            }
+
+            p.info-text {
+                font-family: $--worksans-regular;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: $body;
+                letter-spacing: -0.015em;
+                text-align: left;
+                padding-bottom: unset;
+            }
+        }
+    }
+    .tags-mobile-scroll {
+        @media only screen and (max-width: $--breakpoints-md) {
+            overflow-x: scroll;
+        }
+    }
+}

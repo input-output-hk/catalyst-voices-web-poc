@@ -1,0 +1,1553 @@
+{
+	"info": {
+		"_postman_id": "b49fcfb3-0b1f-4b76-8ab1-2b8a7149905a",
+		"name": "GVC - Dev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14147390"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "Login User",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"identifier\": \"username\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/local",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"local"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "voters",
+			"item": [
+				{
+					"name": "Register voter",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"voting_key\": \"xpub1lx45vasdq23cu8476ulp60px6aggunztdf123fasdvdn2c4asdjyh34jz9k9xjsff923lvs0lhmwg82l7ewhwyutheek6j2asd2f3xepsd141231r\",\n        \"wallet_address\": \"9a624226fd749513ad0ed2e43e663f7132c92faa7\",\n        \"is_passive\": true,\n        \"is_disconnected\": false,\n        \"transaction_hash\": \"9a624226fd749513ad0ed2e43e663f7132c92faa7\"   \n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/voters",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"voters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update voter",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"voting_key\": \"xpub1lx45vasdq23cu8476ulp60px6aggunztdf123fasdvdn2c4asdjyh34jz9k9xjsff923lvs0lhmwg82l7ewhwyutheek6j2asd2f3xepsd141231r\",\n        \"wallet_address\": \"9a64226fd7491513ad0ed2e43e663f7132c92faa7\",\n        \"is_passive\": true,\n        \"is_disconnected\": false,\n        \"transaction_hash\": \"9a624226fd749513ad0ed2e43e663f7132c92faa7\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/voters/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"voters",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get voters",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/voters",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"voters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get single voter",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/voters/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"voters",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete voter",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/voters/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"voters",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "delegations",
+			"item": [
+				{
+					"name": "Create delegation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"voter_id\": 1,\n        \"drep_id\": 3,\n        \"weight_percent\": 32,\n        \"transaction_hash\": \"24e4eea89e3999d153cc2e29263669ca205691aa32ec86fe36819364c48d3232\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/delegations",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"delegations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update delegation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"voter_id\": 2,\n        \"drep_id\": 2,\n        \"weight_percent\": 32,\n        \"transaction_hash\": \"24e4eea89e3999d153cc2e29263669ca205691aa32ec86fe36819364c48d3232\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/delegations/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"delegations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get delegations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/delegations",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"delegations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get single delegation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/delegations/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"delegations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete delegation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/delegations/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"delegations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dreps",
+			"item": [
+				{
+					"name": "Register dRep",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"voting_key\": \"ypub1lx45vasdq23cu8476ulp60px6aggunztdf123fasdvdn2c4asdjyh34jz9k9xjsff923lvs0lhmwg82l7ewhwyutheek6j2asd2f3xepsd141231r\",\n        \"username\": \"test-user2\",\n        \"name\": \"test-name\",\n        \"headline\": \"Headline text\",\n        \"profile_bio\": \"This is a placeholder for drep profile bio\",\n        \"contribution\": \"This is a placeholder for drep contribution\",\n        \"avatar\": \"Binary avatar code or link to picture\",\n        \"email\": \"testuser2@gmail.com\",\n        \"hide_email\": false,\n        \"is_approved\": false,\n        \"socials\": {\"facebook\": \"https://facebook.com\", \"instagram\": \"https://instagram.com\"},\n        \"tags\": [\"NFT\", \"Defi\"]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/dreps",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"dreps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update drep",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"voting_key\": \"xpub1lx45vasdq23cu8476ulp60px6aggunztdf123fasdvdn2c4asdjyh34jz9k9xjsff923lvs0lhmwg82l7ewhwyutheek6j2asd2f3xepsd141231r\",\n        \"username\": \"test-user1\",\n        \"name\": \"test-name\",\n        \"headline\": \"Headline text\",\n        \"profile_bio\": \"This is a placeholder for drep profile bio\",\n        \"contribution\": \"This is a placeholder for drep contribution\",\n        \"avatar\": \"Binary avatar code or link to picture\",\n        \"email\": \"testuser1@gmail.com\",\n        \"hide_email\": false,\n        \"is_approved\": false,\n        \"socials\": {\"facebook\": \"https://facebook.com\", \"instagram\": \"https://instagram.com\"},\n        \"tags\": [\"NFT\", \"Defi\"]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/dreps/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"dreps",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get dReps",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/dreps",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"dreps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get single dRep",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/dreps/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"dreps",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get single dRep by Email",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/dreps/{email}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"dreps",
+								"{email}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get single dRep by Voting Key",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/dreps/{voting_key}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"dreps",
+								"{voting_key}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get single dRep by Username",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/dreps/{username}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"dreps",
+								"{username}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete dRep",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/dreps/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"dreps",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "terms-and-conditions",
+			"item": [
+				{
+					"name": "Create terms and conditions",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var moment = require('moment'); ",
+									"pm.environment.set('timestamp', moment().format((\"YYYY-MM-DD-HH.mm.SS.SSSSSS\")));",
+									"pm.environment.set('date', moment().format((\"YYYY-MM-DD\")));",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"terms_and_conditions\": \"Policies for the Dreps\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/terms-and-conditions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"terms-and-conditions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update terms and conditions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"terms_and_conditions\": \"Policies for the Dreps\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/terms-and-conditions/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"terms-and-conditions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get terms and conditions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/terms-and-conditions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"terms-and-conditions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get single terms and condition",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/terms-and-conditions/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"terms-and-conditions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete terms and condition",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/terms-and-conditions/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"terms-and-conditions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "drep-tos-policies",
+			"item": [
+				{
+					"name": "Create drep tos policy",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var moment = require('moment'); ",
+									"pm.environment.set('timestamp', moment().format((\"YYYY-MM-DD-HH.mm.SS.SSSSSS\")));",
+									"pm.environment.set('date', moment().format((\"YYYY-MM-DD\")));",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"drep_id\": 3,\n        \"tos_id\": 2,\n        \"accepted_at\": {{$timestamp}}\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/drep-tos-policies",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"drep-tos-policies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update drep tos policy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"drep_id\": 3,\n        \"tos_id\": 2,\n        \"accepted_at\": {{$timestamp}}\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/drep-tos-policies/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"drep-tos-policies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get drep tos policies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/drep-tos-policies",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"drep-tos-policies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get single drep tos policy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/drep-tos-policies/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"drep-tos-policies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete dreps tos policy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/drep-tos-policies/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"drep-tos-policies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "privacy-policy",
+			"item": [
+				{
+					"name": "Create privacy policy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"private_policy\": \"Private policy text test\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/privacy-policies",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"privacy-policies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update privacy policy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"private_policy\": \"Private policy text test\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/privacy-policies/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"privacy-policies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get privacy policy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/privacy-policies",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"privacy-policies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single privacy policy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/privacy-policies/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"privacy-policies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete privacy policy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/privacy-policies/2",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"privacy-policies",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "drep-privacy-policy",
+			"item": [
+				{
+					"name": "Create drep privacy policy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"drep_id\": 3,\n        \"privacy_policy_id\": 3,\n        \"accepted_at\": {{$timestamp}}\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/drep-privacy-policies",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"drep-privacy-policies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update drep privacy policy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"drep_id\": 3,\n        \"privacy_policy_id\": 3,\n        \"accepted_at\": {{$timestamp}}\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/drep-privacy-policies/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"drep-privacy-policies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get drep privacy policies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/drep-privacy-policies",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"drep-privacy-policies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single drep privacy policy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/drep-privacy-policies/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"drep-privacy-policies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete drep privacy policy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/drep-privacy-policies/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"drep-privacy-policies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transactions",
+			"item": [
+				{
+					"name": "Create a transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"transaction_hash\": \"24e4eea89e3999d153cc2e29263669ca205691aa32ec86fe36819364c48d3232\",\n        \"transaction_metadata\": {\n             \"data\": null\n        },\n        \"submitted_at\": \"2022-09-14T12:44:32+00:00\",\n        \"finalized_at\": \"2022-09-14T12:44:32+00:00\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/transactions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n        \"transaction_hash\": \"24e4eea89e3999d153cc2e29263669ca205691aa32ec86fe36819364c48d3232\",\n        \"transaction_metadata\": {\n            \"data\": null\n        },\n        \"submitted_at\": \"2022-09-14T12:44:32+00:00\",\n        \"finalized_at\": \"2022-09-14T12:44:32+00:00\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/transactions/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transactions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all transactions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/transactions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/transactions/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transactions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/transactions/1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transactions",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cbor",
+			"item": [
+				{
+					"name": "Cbor Decode",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"string\": \"b338db436ba18094c82cb66ed8d0edab6eb9065ab481bde728db88f076dc1ef5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/cbor-decode",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cbor-decode"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "blockfrost",
+			"item": [
+				{
+					"name": "Check Transactions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/blockfrost/transactions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"blockfrost",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://z7d8df2ee-z005aafc5-gtw.z11c1765d.numa.sh/api",
+			"type": "string"
+		},
+		{
+			"key": "testUrl",
+			"value": "http://localhost:1337/api",
+			"type": "string"
+		}
+	]
+}

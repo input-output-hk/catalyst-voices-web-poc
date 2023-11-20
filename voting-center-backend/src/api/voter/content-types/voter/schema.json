@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "voters",
+  "info": {
+    "singularName": "voter",
+    "pluralName": "voters",
+    "displayName": "voters",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "wallet_address": {
+      "type": "string",
+      "unique": true,
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1
+    },
+    "is_passive": {
+      "type": "boolean",
+      "required": true
+    },
+    "is_disconnected": {
+      "type": "boolean",
+      "required": true
+    },
+    "voting_key": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 255,
+      "minLength": 30
+    },
+    "transaction_hash": {
+      "type": "text",
+      "required": true
+    },
+    "encoded_voting_key": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "minLength": 1,
+      "unique": true
+    }
+  }
+}

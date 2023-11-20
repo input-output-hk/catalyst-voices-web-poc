@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "delegations",
+  "info": {
+    "singularName": "delegation",
+    "pluralName": "delegations",
+    "displayName": "delegations",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "weight_percent": {
+      "type": "integer",
+      "max": 100,
+      "min": 1
+    },
+    "transaction_hash": {
+      "type": "text",
+      "required": true
+    },
+    "voter_id": {
+      "type": "integer",
+      "required": true
+    },
+    "drep_id": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

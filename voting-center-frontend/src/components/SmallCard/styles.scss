@@ -1,0 +1,20 @@
+@import '../../assets/styles/variables';
+.small-card {
+    border-radius: 8px;
+    @include box-shadow-profile-card();
+    border: none;
+    padding: 32px;
+    .card-title {
+        font-size: 24px;
+        font-weight: 700;
+        font-family: $--poppins-bold;
+        margin-bottom: 24px;
+        line-height: 34px;
+    }
+    .card-item-text {
+        color: $body;
+        font-family: $--worksans-regular;
+        font-weight: 400;
+        line-height: 24px;
+    }
+}

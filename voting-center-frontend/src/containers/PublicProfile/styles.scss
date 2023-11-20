@@ -1,0 +1,215 @@
+@import '../../assets/styles/variables';
+
+.image-format-text {
+    text-align: left !important;
+    color: $body;
+    font-family: $--worksans-regular;
+    font-weight: 400;
+}
+
+.public-profile-wrapper {
+    background-color: $background;
+    padding-bottom: 20vh;
+    .profile-wrapper {
+        .profile-content-main-wrapper {
+            padding: 24px;
+            background-color: $white;
+            border-radius: 8px;
+            @include box-shadow-profile-card();
+        }
+    }
+
+    .profile-chart {
+        height: 100%;
+        .button-component h5 {
+            font-size: 16px;
+            padding: 0;
+        }
+
+        .public-profile-card-styling {
+            margin-bottom: 32px;
+
+            &.wallet-address {
+                margin-bottom: unset;
+                height: fit-content;
+                max-width: 100%;
+            }
+
+            @media only screen and (max-width: $--breakpoints-lg) {
+                margin-bottom: 24px;
+                max-width: unset;
+            }
+        }
+    }
+
+    .edit-button {
+        &:hover {
+            svg {
+                path {
+                    fill: $blueLight-600;
+                }
+            }
+        }
+    }
+    .share-button {
+        &:hover {
+            svg {
+                path {
+                    fill: $blueLight-600;
+                }
+            }
+        }
+    }
+
+    .drep-email-button {
+        width: 100%;
+
+        @media only screen and (max-width: $--breakpoints-sm) {
+            padding: 10px 16px;
+            max-height: unset;
+        }
+    }
+
+    .social-icon-styling {
+        @media only screen and (min-width: $--breakpoints-xs) {
+            padding: 10px 16px;
+            max-height: unset;
+        }
+
+        svg {
+            path {
+                stroke: none !important;
+            }
+        }
+    }
+
+    .card-body-styling {
+        .card-body {
+            padding: unset;
+        }
+    }
+
+    .social-icons-row {
+        gap: 10px;
+    }
+
+    .tags-row {
+        row-gap: 16px;
+    }
+}
+
+.edit-profile-modal {
+    margin-top: 19px;
+    .dropDownNavSmaller {
+        @media only screen and (max-width: $--breakpoints-md) {
+            .dropDownButton,
+            .dropDownNavMenu {
+                min-width: 100%;
+            }
+        }
+        @media only screen and (min-width: $--breakpoints-md) {
+            .dropDownButton,
+            .dropDownNavMenu {
+                min-width: 327px;
+            }
+        }
+    }
+    .change-picture-button {
+        max-height: 44px;
+
+        @media only screen and (max-width: $--breakpoints-md) {
+            padding: 10px 19px;
+            h5 {
+                font-family: $--worksans-semibold;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                color: $body;
+            }
+        }
+        @media only screen and (min-width: $--breakpoints-md) {
+            padding: 10px 19px;
+            h5 {
+                font-family: $--worksans-semibold;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                color: $body;
+            }
+        }
+    }
+
+    .dreps-tags-heading {
+        font-family: $--worksans-medium;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: $body;
+    }
+
+    .dreps-tags-subheading {
+        font-family: $--worksans-regular;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: $body;
+        text-align: left;
+    }
+
+    .drep-tags-wrapper {
+        gap: 16px;
+    }
+
+    .dreps-delete-account-heading {
+        font-family: $--poppins-semibold;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 34px;
+        color: $headings;
+        text-align: left;
+    }
+
+    .delete-account-list-item {
+        font-family: $--worksans-regular;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: $body;
+        text-align: left;
+    }
+
+    .edit-modal-toggle {
+        .form-check-label {
+            @media only screen and (max-width: $--breakpoints-md) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .first-step {
+        input {
+            &.form-control.is-invalid:not(.username)[focused='true'],
+            &.form-control:invalid:not(.username)[focused='true'],
+            &.form-control:invalid:focus:not(.username)[focused='true'],
+            &.form-control.is-invalid:focus:not(.username)[focused='true'] {
+                border-color: $redLight-400;
+                background-image: none;
+                background-color: $greyLight-50;
+                @include box-shadow-shadow-sm();
+            }
+
+            &.form-control.username.is-invalid[focused='true'],
+            &.form-control.username:invalid[focused='true'],
+            &.form-control.username:invalid:focus[focused='true'],
+            &.form-control.username.is-invalid:focus[focused='true'] {
+                background-image: none;
+                background-color: $greyLight-50;
+                box-shadow: none;
+            }
+        }
+        .profile-info-avatar {
+            width: 64px;
+            height: 64px;
+        }
+    }
+}

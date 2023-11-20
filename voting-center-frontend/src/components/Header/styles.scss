@@ -1,0 +1,15 @@
+@import '../../assets/styles/variables';
+
+.header{
+    .header-logo{
+        width: 140px;
+        cursor: pointer;
+    }
+    .header-logo-mobile {
+        width: 40px;
+        height: 40px;
+        min-height: 40px;
+        min-width: 40px;
+        cursor: pointer;
+    }
+}
