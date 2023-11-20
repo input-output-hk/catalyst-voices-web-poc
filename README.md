@@ -1,4 +1,3 @@
-<img src="./voting-center-backend/public/uploads/logo.png" width='80px' />
 
 # Catalyst Voices - Web based Voting Center - POC
 
